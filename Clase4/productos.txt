@@ -1,0 +1,1 @@
+[{"title":"producto2","price":674,"thumbnail":"www.coderhouse.com/prueba","id":1},{"title":"producto2","price":674,"thumbnail":"www.coderhouse.com/prueba","id":2}]
