@@ -1,0 +1,23 @@
+Websockets: basado en protocolo TCP. Hay un orden establecido en el envío de la información
+Características Principales:
+    - Se establece una comunicación entre dos puntos finales (sockets)
+    - La comunicación es bi-direccional. El servidor puede enviar información al cliente sin que este pregunte.
+    - Permite hacer mas pequeña la transferencia de datos (menos datos pero transmision constante)
+    - Cuando uno usa HTTP, se genera un delay (latencia) entre el request y la respuesta. EN cambio usando Websockets
+      cuando se establece la conexion ya queda establecida, no hay que hacer requests nuevos. Esto minimiza la latencia.
+    - EL canal de conexion queda abierto. EN cambio HTTP es un sistema de pregunta - respuesta.
+    - Websocket es un servidor PROACTIVO (no espera el request del cliente. CUando algo ocurre en el sistema reacciona autonomamente)
+    - HANDSHAKE: comunicacion inicial donde se autoriza al cliente a conectarse al servidor.
+    - HTTP nos puede servir para obtener informacion de manera mas esporadica o mas grande.
+    - WEBSOCKET nos puede servir para actualizar informacion mas pequena en tiempo real
+    - WEBSOCKET: ORIENTADO A EVENTOS
+
+Microservicio: es un backend pequeno que tiene una tarea especifica y pequena. Al ser necesario multiples servidores
+backend, se necesita un protocolo orientado a EVENTOS. De todas maneras no se usa websocket.
+
+SOCKET.IO --> Libreria por excelencia para trabajar con websockets.
+    Se usa la misma libreria del lado del cliente y del servidor.
+    FIable: resiste a proxy, firewalls, establece
+    Reconexion automatica: si el cliente se cae, intenta reconectarse automaticamente (a menos q se indique lo contrario)
+    Deteccion de Desconeccion: Heartbeat
+    Soporte Binario: 
