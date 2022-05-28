@@ -1,6 +1,7 @@
 const Contenedor = require('./simplifiedContainer')
 const express = require('express')
 const {Router} = express
+const {engine} = require('express-handlebars')
 
 const productArray = [
     {title: 'Tornillos', price: 23, thumbnail:'https://cdn2.iconfinder.com/data/icons/random-set-1/432/Asset_80-128.png', id: 1},
@@ -15,8 +16,19 @@ const PORT = 8080
 // app.set('views', './views/pug')
 // app.set('view engine', 'pug')
 
-app.set('views', './views/ejs')
-app.set('view engine', 'ejs')
+// app.set('views', './views/ejs')
+// app.set('view engine', 'ejs')
+
+app.engine('hbs',
+    engine({
+        extname: '.hbs',
+        defaultlayout: 'main.hbs',
+        layoutsDir: __dirname + '/views/hbs',
+        partialsDir: __dirname + '/views/hbs/hbsPartials'
+    })
+)
+app.set('views', './views/hbs')
+app.set('view engine', 'hbs')
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -28,14 +40,19 @@ apiRouter.get('', (req, res) => {
 
 apiRouter.get('/all', (req, res) => {
     const data3 = products.data
-    return res.render('productList', {data3})
+    let length = null
+    if(data3.length > 0){
+        length = data3.length
+    }
+    return res.render('productList', {data3, length})
 })
+
 apiRouter.post('', (req, res) => {
     if(req.body.title && req.body.price && req.body.thumbnail != ''){
         products.save(req.body)
-        return res.render('home',{status:1})
+        return res.render('home',{status:1, hbsStatus: null})
     } else {
-        return res.render('home',{status:0})
+        return res.render('home',{status:0, hbsStatus: 'missing data'})
     }
 })
 
