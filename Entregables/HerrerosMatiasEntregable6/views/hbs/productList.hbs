@@ -1,0 +1,26 @@
+{{#if length}}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Icono</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data3}}
+        <tr>
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.title}}</td>
+            <td>{{this.price}}</td>
+            <td><img src={{this.thumbnail}} alt="product image" width="50" height="50"></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<div class="alert alert-warning" role="alert">
+    Data NOT FOUND
+</div>
+{{/if}}

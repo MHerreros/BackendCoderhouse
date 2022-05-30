@@ -1,0 +1,28 @@
+extends index.pug
+block content
+    .modal-dialog
+        .modal-content
+            // Modal Header
+            .modal-header
+                button.close(type="button", data-dismiss="modal")
+                    span(aria-hidden="true") ×
+                    span.sr-only Close
+            .modal-body
+                table(style='width:100%', class="table table-hover")
+                    if data3.length != 0
+                        tr
+                            th Id
+                            th Producto
+                            th Precio
+                            th Icono
+                        each product in data3
+                            tr
+                                td= product.id
+                                td= product.title
+                                td= product.price
+                                td
+                                    img(src=product.thumbnail, alt="product image", width="50", height="50")
+                    else
+                        p='Data NOT FOUND'
+                        a(class='btn btn-primary', href='http://localhost:8080/api/productos') Añadir Productos
+
