@@ -15,8 +15,14 @@ const productArray = [
     {title: 'Rodillo', price: 550, thumbnail:'https://cdn2.iconfinder.com/data/icons/random-set-1/492/Asset_74-128.png', id: 2}
 ]
 
+const messageArray = [
+    {mail:'matias@email.com', timestamp:'12:04', message:'Hola mundo'},
+    {mail:'matias@email.com', timestamp:'12:04', message:'Hola mundo'}
+]
+
 const Contenedor = require('./simplifiedContainer')
 const products = new Contenedor(productArray)
+const messages = new Contenedor(messageArray)
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -28,13 +34,16 @@ app.set('view engine', 'ejs')
 
 apiRouter.get('', (req, res) => { 
     const data3 = products.data
-    let length = null
-    if(data3.length > 0){
-        length = data3.length
-    }
+    const messageCont = messages.data
+    // Logica para verificar que haya contenido y permita modificar el valor de STATUS
+    // let length = null
+    // if(data3.length > 0){
+    //     length = data3.length
+    // }
     return res.render('home', {
         status:1, 
-        data3
+        data3,
+        messageCont
     })
 })
 
@@ -47,14 +56,14 @@ apiRouter.get('/all', (req, res) => {
     return res.render('productList', {data3, length})
 })
 
-apiRouter.post('', (req, res) => {
-    if(req.body.title && req.body.price && req.body.thumbnail != ''){
-        products.save(req.body)
-        return res.render('home',{status:1, hbsStatus: null})
-    } else {
-        return res.render('home',{status:0, hbsStatus: 'missing data'})
-    }
-})
+// apiRouter.post('', (req, res) => {
+//     if(req.body.title && req.body.price && req.body.thumbnail != ''){
+//         products.save(req.body)
+//         return res.render('home',{status:1, hbsStatus: null})
+//     } else {
+//         return res.render('home',{status:0, hbsStatus: 'missing data'})
+//     }
+// })
 
 // apiRouter.get('/:id', (req, res) => {
 //     const selectedProduct = products.getById(req.params.id)
@@ -90,5 +99,12 @@ io.on('connection', socket => {
         const data3 = newProduct
         socket.emit('refreshList', data3)
         socket.broadcast.emit('refreshList', data3)
+    })
+
+    socket.on('addMessage', newMessage => {
+        messages.save(newMessage)
+        const messageCont = newMessage
+        socket.emit('refreshMessages', messageCont)
+        socket.broadcast.emit('refreshMessages', messageCont)
     })
 })
