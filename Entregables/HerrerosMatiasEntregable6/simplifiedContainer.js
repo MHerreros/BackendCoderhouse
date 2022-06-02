@@ -1,13 +1,32 @@
+const fs = require(`fs`)
+const { parse } = require("path")
+
 class simplifiedContainer {
 
     constructor(productArray){
         this.data = productArray
     }
 
-    save(nuevoProducto){
-        nuevoProducto.id = this.data.length + 1
-        this.data.push(nuevoProducto)
-        return nuevoProducto
+    save(nuevoObjeto, path){
+        return(fs.promises.readFile(`./public/${path}`,'utf-8')
+            .then((data) => {
+                console.log('PASO 1')
+                const parsedData = JSON.parse(data)
+                if(path == 'BDDproducts.txt'){
+                    nuevoObjeto.id = parsedData.length + 1
+                }
+                parsedData.push(nuevoObjeto)
+                const writeData = JSON.stringify(parsedData)
+                return fs.promises.writeFile(`./public/${path}`,writeData)
+            })
+            .then(() => console.log(`Se ha guardado el objeto en la BDD`))
+            .catch(error => {
+                console.log(`PASO 1: ${error}`)
+            })
+        )
+        // nuevoProducto.id = this.data.length + 1
+        // this.data.push(nuevoProducto)
+        // return nuevoProducto
     }
 
     getById(id){
@@ -19,8 +38,19 @@ class simplifiedContainer {
             return {error: `No se encuentra el ID ${id}`}
         }
     }
-    getAll(){
-        return this.data
+    getAll(path){
+        return(fs.promises.readFile(`./public/${path}`,'utf-8')
+            .then((data) => {
+                const parsedData = JSON.parse(data)
+                // return JSON.stringify(parsedData)
+                return parsedData
+            })
+            .catch(error => {
+                console.log(`Error al buscar el arreglo ${error}`)
+            })
+        )
+
+        // return this.data
     }
 
     modifyById(id, newData){
