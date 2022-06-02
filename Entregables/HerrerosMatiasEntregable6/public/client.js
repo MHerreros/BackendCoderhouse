@@ -8,7 +8,8 @@ const submitMessage = document.getElementById('submitMessage')
 const messageTable = document.getElementById('messageTableBody')
 
 
-submitProduct.addEventListener('click', () => {
+submitProduct.addEventListener('click', (event) => {
+    event.preventDefault()
     const newProduct = {
         title: document.getElementById('title').value,
         price: document.getElementById('price').value,
@@ -17,6 +18,9 @@ submitProduct.addEventListener('click', () => {
     if((newProduct.title == '') || (newProduct.price == '') || (newProduct.thumbnail == '')){
         console.log('faltan datos')
     } else {
+        document.getElementById('title').value = ''
+        document.getElementById('price').value = ''
+        document.getElementById('thumbnail').value = ''
         socket.emit('addProduct', newProduct)
     }
 })
@@ -38,7 +42,8 @@ socket.on('refreshList', data3 => {
     productsTable.innerHTML += newItem
 })
 
-submitMessage.addEventListener('click', () => {
+submitMessage.addEventListener('click', (event) => {
+    event.preventDefault()
     const newMessage = {
         mail: document.getElementById('emailInput').value,
         timestamp: new Date(),

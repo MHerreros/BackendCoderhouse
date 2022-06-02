@@ -1,1 +1,1 @@
-[{"mail":"matias@testing.com","timestamp":"2022-06-02T00:24:09.734Z","message":"Hola 1"},{"mail":"graciela@testing.com","timestamp":"2022-06-02T00:24:29.791Z","message":"Hola 2"}]
+[{"mail":"matias@testing.com","timestamp":"2022-06-02T00:24:09.734Z","message":"Hola 1"},{"mail":"graciela@testing.com","timestamp":"2022-06-02T00:24:29.791Z","message":"Hola 2"},{"mail":"carlos@testing.com","timestamp":"2022-06-02T01:08:48.685Z","message":"Hola 3"}]
