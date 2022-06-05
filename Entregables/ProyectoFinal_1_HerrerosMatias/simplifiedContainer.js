@@ -11,10 +11,8 @@ class simplifiedContainer {
         return(fs.promises.readFile(`./public/${path}`,'utf-8')
             .then((data) => {
                 const parsedData = JSON.parse(data)
-                if(path == 'BDDproducts.txt'){
-                    nuevoObjeto.id = parsedData.length + 1
-                    nuevoObjeto.timestamp = Date.now()
-                }
+                nuevoObjeto.id = parsedData.length + 1
+                nuevoObjeto.timestamp = Date.now()
                 parsedData.push(nuevoObjeto)
                 const writeData = JSON.stringify(parsedData)
                 return fs.promises.writeFile(`./public/${path}`,writeData)
@@ -44,14 +42,21 @@ class simplifiedContainer {
         )
     }
 
-    getAll(path){
+    getAll(path, cartId){
         return(fs.promises.readFile(`./public/${path}`,'utf-8')
             .then((data) => {
                 const parsedData = JSON.parse(data)
-                return parsedData
+                if(!cartId){
+                    return parsedData
+                }
+                const selectedElement = parsedData.find(element => element.id === cartId)
+                if (selectedElement){
+                    return selectedElement.productos
+                }
+                throw Error(`No existe el ID ${cartId}`)
             })
             .catch(error => {
-                throw Error(`Error en lectura de archivo en funcion getAll ${error.message}`)
+                throw Error(`Error en lectura de archivo en funcion getAll. ${error.message}`)
             })
         )
     }
@@ -71,6 +76,10 @@ class simplifiedContainer {
                     parsedData[index].precio = newData.precio
                     parsedData[index].stock = newData.stock
                     parsedData[index].timestamp = Date.now()
+                } else if (path == 'BDDcart.txt'){
+                    parsedData[index].productos.push(newData)
+                } else {
+                    throw Error('Error en la ruta de la BDD')
                 }
             } else {
                 throw Error('No existe el ID')
@@ -87,22 +96,32 @@ class simplifiedContainer {
         )
     }
 
-    deleteById(path, id){
+    deleteById(path, general_id, prod_id){
         return(fs.promises.readFile(`./public/${path}`,'utf-8')
             .then((data) => {
                 const parsedData = JSON.parse(data)
-                const selectedElement = parsedData.find(element => element.id === id)
+                const selectedElement = parsedData.find(element => element.id === general_id)
                 if(selectedElement){
                     const index = parsedData.indexOf(selectedElement)
-                    parsedData.splice(index, 1)
+                    if(prod_id){
+                        const subSelectedElement = parsedData[index].productos.find(element => element.id === prod_id)
+                        if(subSelectedElement){
+                            const subSelectedIndex = parsedData[index].productos.indexOf(subSelectedElement)
+                            parsedData[index].productos.splice(subSelectedIndex, 1)
+                        } else {
+                            throw Error(`No existe el ID de Producto: ${prod_id}`)
+                        }
+                    } else {
+                        parsedData.splice(index, 1)
+                    }
                     const writeData = JSON.stringify(parsedData)
                     return fs.promises.writeFile(`./public/${path}`, writeData)
                 } else {
-                    throw Error(`No existe el ID ${id}`)
+                    throw Error(`No existe el ID general ${general_id}`)
                 }
             })
             .then(() => {
-                return {message: `Se ha eliminado el objeto con id ${id}`}
+                return {message: `Se ha eliminado el objeto con id ${general_id}`}
             })
             .catch(error => {
                 throw Error(`Error en lectura/escritura de arvhivo en funcion deleteById. ${error.message}`)
