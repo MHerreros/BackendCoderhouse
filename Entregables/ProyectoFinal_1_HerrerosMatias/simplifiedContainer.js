@@ -102,8 +102,8 @@ class simplifiedContainer {
                 const parsedData = JSON.parse(data)
                 const selectedElement = parsedData.find(element => element.id === general_id)
                 if(selectedElement){
-                    const index = parsedData.indexOf(selectedElement)
-                    if(prod_id){
+                    const index = parsedData.indexOf(selectedElement)   // Selecciono el carrito o producto
+                    if(prod_id){                                        // Si hay prod_id, implica que el selected element es el carrito y debo 'subseleccionar' el producto de dicho carrito
                         const subSelectedElement = parsedData[index].productos.find(element => element.id === prod_id)
                         if(subSelectedElement){
                             const subSelectedIndex = parsedData[index].productos.indexOf(subSelectedElement)
