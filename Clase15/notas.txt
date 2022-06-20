@@ -1,0 +1,16 @@
+BASES DE DATOS
+
+Tipos de Clientes
+    1. Cliente CLI (Command Line Interface): acceso mediante consola
+    2. Cliente GUI: se entra a la bdd mediante una aplicacion grafica
+    3. Clientes web: acceden desde el navegador
+    4. Clientes aplicacion: acceden desde una app. Esto es lo que vamos a usar para entrar desde NODE. Cliente implementado dentro de la app de backend.
+
+CRUD: Create Read Update Delete. SOn las tareas que se pueden realizar en una BDD.
+
+SQL: Structured Query Language. 
+    - Se hace uso de palabras reservadas para darle instrucciones a la BDD.
+    - BDD relacional
+
+My SQL y MariaDB: sistemas de gestiojn de BDD. La primera es de Oracle y es de pago, la seguna es open source.
+MySQL Workbench: Cliente GUI
