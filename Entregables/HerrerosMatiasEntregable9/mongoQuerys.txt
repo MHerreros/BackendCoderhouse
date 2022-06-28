@@ -1,0 +1,64 @@
+use ecommerce
+const productosV2 = [
+    {"nombre":"Cono", "descripcion":"cono de plastico", "codigo":00001, "foto":"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png", "precio": 200, "stock": 31},
+    {"nombre":"Cafe", "descripcion":"cafe con leche", "codigo":00002, "foto":"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png", "precio": 120, "stock": 2},
+    {"nombre":"Maletin", "descripcion":"maletin negro", "codigo":00003, "foto":"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png", "precio": 1030, "stock": 33},
+    {"nombre":"Carpeta", "descripcion":"carpeta de carton", "codigo":00004, "foto":"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png", "precio": 150, "stock": 4},
+    {"nombre":"Rodillo", "descripcion":"rodillo de pared", "codigo":00005, "foto":"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png", "precio": 550, "stock": 333},
+    {"nombre":"Tornillos", "descripcion":"tornillos fisher", "codigo":00006, "foto":"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png", "precio": 100, "stock": 98},
+    {"nombre":"Fotos", "descripcion":"fotos 15x40", "codigo":00007, "foto":"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png", "precio": 2500, "stock": 700},
+    {"nombre":"Memoria", "descripcion":"memoria 128 GB", "codigo":00008, "foto":"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png", "precio": 4001, "stock": 5881},
+    {"nombre":"Calendario", "descripcion":"calendario 2022", "codigo":00009, "foto":"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png", "precio": 560, "stock": 6},
+    {"nombre":"Caja", "descripcion":"caja archivadora", "codigo":00010, "foto":"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png", "precio": 5000, "stock": 1}]
+
+const productos = [ 
+    { "title": "Teclado", "price": 400, "thumbnail": "" }, 
+    { "title": "PC", "price": 5000, "thumbnail": "" }, 
+    { "title": "Mouse", "price": 200, "thumbnail": "" }, 
+    { "title": "iPad", "price": 4500, "thumbnail": "" }, 
+    { "title": "iPhone", "price": 4000, "thumbnail": "" }, 
+    { "title": "Mate", "price": 2350, "thumbnail": "" }, 
+    { "title": "Yerba", "price": 100, "thumbnail": "" }, 
+    { "title": "Bombilla", "price": 230, "thumbnail": "" }, 
+    { "title": "Termo", "price": 1002, "thumbnail": "" }, 
+    { "title": "Monitor", "price": 3320, "thumbnail": "" }]
+
+const mensajes = [
+    {"mail":"mail1@test.com","timestamp":1655745876933,"message":"Mensaje 1"},
+    {"mail":"mail2@test.com","timestamp":1655745880753,"message":"Mensaje 2"},
+    {"mail":"mail3@test.com","timestamp":1655745891158,"message":"Mensaje 3"},
+    {"mail":"mail2@test.com","timestamp":1655745931567,"message":"Mensaje 4"},
+    {"mail":"mail3@test.com","timestamp":1655745934952,"message":"Mensaje 5"},
+    {"mail":"mail1@test.com","timestamp":1655747114148,"message":"Mensaje 6"},
+    {"mail":"mail2@test.com","timestamp":1655745934952,"message":"Mensaje 7"},
+    {"mail":"mail3@test.com","timestamp":1655745934952,"message":"Mensaje 8"},
+    {"mail":"mail1@test.com","timestamp":1655745934952,"message":"Mensaje 9"},
+    {"mail":"mail2@test.com","timestamp":1655745934952,"message":"Mensaje 10"}]
+
+db.mensajes.insertMany(mensajes)
+db.productos.insertMany(productos)
+
+db.mensajes.find()
+db.productos.find()
+
+db.productos.estimatedDocumentCount()
+db.mensajes.estimatedDocumentCount()
+
+const newProduct = { "title": "Pad", "price": "4211", "thumbnail": "" }
+
+db.productos.insertOne(newProduct)
+
+db.productos.find({"price":{$lt:1000}},{"price":1})
+db.productos.find({$and:[{"price":{$lt:3000}},{"price":{$gt:1000}}]},{"price":1})
+db.productos.find({"price":{$gt:3000}},{"price":1})
+db.productos.find().sort({"price":1}).skip(2).limit(1)
+
+db.productos.updateMany({},{$set:{"stock":100}})
+
+db.productos.updateMany({"price":{$gt:4000}},{$set:{"stock":0}})
+
+db.productos.deleteMany({"price":{$lt:1000}})
+
+use admin
+
+db.createUser({user: "pepe", pwd:"asd456", roles:[{role: "read", db: "ecommerce"}]})

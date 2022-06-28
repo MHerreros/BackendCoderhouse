@@ -1,0 +1,55 @@
+COMANDOS MONGO
+
+LOAD: 
+    Cuando ejecuto en la consola 'mongosh', se ejecuta desde la direccion en la cual tenog abierta la consola.
+    Si yo quiero cargar y ejecutar un script de JS para que ejecute Mongo, hago uso de la funcion LOAD.
+    Esta funcion toma como parametro la ruta relativa que hay desde la direccion desde donde ejecuto mongosh hacia
+    el archivo que quiero ejecutar.
+
+CLS: limpia la consola
+
+PRETTY: db.collection.find().pretty() => Hace que el resultado de la busqueda aparezca mas 'lindo'
+
+_id: 
+    ObjectId es un tipo de dato especifico de Mongo. 
+    Es un ID unico de nuestra coleccion. El codigo tiene una interpretacion.
+    Una parte es un timestamp, otra es random, otra es incremental en hexadecimal.
+
+STEVERIDOUT: pagina para traducir el ID que genera mongo
+
+CRITERIO PARA SELECCIONAR MONGO O SQL
+    1) Segun la tecnologia por la que se sienta mas comodo
+    2) Dependiendo del problema a resolver. Si tengo estructuras rigidas que van a estar relacionadas quizas convenga SQL.
+
+TRANSACCION:
+    Instrucciones que uno ejecuta con una DB en forma secuencial. Si una parte falla, todas las operaciones relalizadas se vuelven 
+    para atras. Esta es una funcionalidad que, nativamente, la tiene SQL y no Mongo.
+
+COUNT DOCUMENTS:
+    countDocuments: uno puede usarlo para filtrar documentos (cuenta cantidad de ocurrencias que cumplen con el filtro)
+    estimatedDOcumentCount: cuenta el total de los documentos (no puede filtrar)
+
+OPERADORES PARA FILTROS DE QUERY:
+    Sirven para especificar y complejizar la busqueda de elemntos usando filtros. Buscar documentacion en mongo
+
+PROYECCION: segundo parametro dentro del FIND. Es para indicar el 'que' va a devolver de los objetos que cumplan con los filtros.
+
+SORT: 
+    find().sort({param: -1 o 1}) 
+    Ordena de forma ascendente o descendente. Se pueden poner varios parametros para que ordene segun varios criterios.
+    .limit(number) es para que traiga los 'n' elementos iniciales
+    .skip(number) es para que saltee 'n' elementos y traiga los siguientes
+
+UPDATE:
+    SET: 
+        Param 1: filtro a aplicar. Es idem a los filtros ya vistos arriba.
+        Param 2: instruccion a realizar sobre los elementos encontrados.
+        Param 3: upsert. En caso de no encontrar un elemento que cumpla con lo especificado en el filtro, se puede insertar
+    PUSH:
+        Incorporar un elemento si se cumple sierta condicion
+
+USERS:
+    db.createUser({param 1, param 2, param 3})
+    Param 1: nombre de usuario
+    Param 2: contrasena
+    Param 3: roles [{role, db Name}]
