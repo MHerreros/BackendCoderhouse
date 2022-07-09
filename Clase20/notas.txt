@@ -1,0 +1,11 @@
+DBAAS & FIREBASE
+
+DBAAS: plataforma que nos permite tener una base de datos. Hay un proveedor que tiene el HARD y presta el servicio de DB.
+
+MONGO DB ATLAS:
+    USER: matias
+    PASSWORD: xsBZtP6jv0Bifco3
+
+firebase:
+
+Serverless DB. Hay una concexion directa del usuario a la DB.

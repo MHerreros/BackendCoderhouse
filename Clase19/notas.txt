@@ -1,0 +1,15 @@
+MONGOOSE: libreria que permite interaccion con MONGO
+
+OBJETOS:
+    SCHEMA: define lista de propiedades del documento. Se define estructura. Esta estructura esta 
+    un nivel por arriba de la DB. Es decir, se establece una superestructura para los datos, pero 
+    en realidad en la DB los datos siguen sin estructura. El sechema se crea a nivel aplicacion.
+
+    MODELO CONSTRUCTOR: son instancias de los SCHEMAS que le agregan propiedades, metodos, etc. 
+
+ODM: Mongoose es un ODM (Object Document Mapper). SIgnifica que es un esquema que se puede asignar
+a un documento de mongo.
+
+NOTA MENTAL: LA ESTRUCTURA SE LA DAS A LA BASE DE DATOS AL MOMENTO DE INSERTAR LOS DOCUMENTOS (CON 
+MONGGOSE DEFINO QUE ES LO QUE TIENE QUE TENER Y, POR ENDE LA DB QUEDA ORDENADA CON UNA ESTRUCTURA. 
+PERO NO ES UNA STRUCTURA DE LA DB, SINO QUE VIENE DADA POR MONGOOSE)
