@@ -44,8 +44,8 @@ const getStorage = () => {
 
     case 'firebase':
       return {
-        products: new ProductosDAOFirebase(),
-        carts: new CarritosDAOFirebase()
+        products: new ProductosDAOFirebase('producto'),
+        carts: new CarritosDAOFirebase('carrito')
       }
       break
     default:
