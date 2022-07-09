@@ -7,7 +7,7 @@ class ProductosFirebase extends ContenedorFirebase {
         super(collectionName)
     }
 
-    async modifyProduct(modProduct, id) {
+    async modifyById(modProduct, id) {
         try {
             const doc = this.query.doc(id)
             let item = await doc.update(modProduct);

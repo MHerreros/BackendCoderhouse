@@ -61,13 +61,4 @@ module.exports = class ContenedorFirebase {
       console.log(e)
     }
   }
-
-  async create(item) {
-    try {
-      const guardado = await this.query.add(item)
-      return { ...item, id: guardado.id }
-    } catch (error) {
-      throw new Error(`Error al guardar: ${error}`)
-    }
-  }
 }

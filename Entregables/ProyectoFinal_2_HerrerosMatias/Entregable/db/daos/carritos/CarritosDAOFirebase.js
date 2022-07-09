@@ -6,7 +6,7 @@ class CarritosFirebase extends ContenedorFirebase {
        super(collectionName)
     }
 
-     async deleteProduct(cartID, prodID){
+     async deleteById(cartID, prodID){
         try {
             const doc = this.query.doc(cartID)
             const getDoc = await this.query.doc(cartID).get()
@@ -22,7 +22,7 @@ class CarritosFirebase extends ContenedorFirebase {
      }
 
 
-    async addProduct(id, product) {
+    async modifyById(id, product) {
         try {
             const doc = this.query.doc(id)
             let item = await doc.update({
