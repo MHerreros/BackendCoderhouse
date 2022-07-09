@@ -1,5 +1,8 @@
-import ContenedorFirebase from  '../../containers/firebase/containerFirebase.js'
+// import ContenedorFirebase from  '../../containers/firebase/containerFirebase.js'
 // import {FieldValue} from 'firebase-admin/firestore'
+
+const ContenedorFirebase = require('../../containers/firebase/containerFirebase.js')
+const {FieldValue} = require('firebase-admin/firestore')
 
 class CarritosFirebase extends ContenedorFirebase {
     constructor(collectionName){
