@@ -28,9 +28,6 @@ submitProduct.addEventListener('click', (event) => {
 socket.on('refreshList', data3 => {
     const newItem = 
         `<tr>
-            <th scope="row">
-                ${data3.id}
-            </th>
             <td>
                 ${data3.title}
             </td>
@@ -45,9 +42,15 @@ socket.on('refreshList', data3 => {
 submitMessage.addEventListener('click', (event) => {
     event.preventDefault()
     const newMessage = {
-        mail: document.getElementById('emailInput').value,
-        timestamp: new Date(),
-        message: document.getElementById('messageInput').value
+        author: {
+            id: document.getElementById('emailInput').value,
+            nombre:document.getElementById('nameInput').value,
+            apellido:document.getElementById('surnameInput').value,
+            edad:document.getElementById('ageInput').value,
+            alias:document.getElementById('aliasInput').value,
+            avatar: "../static/icons/generic_avatar.png"
+        },
+        text: document.getElementById('messageInput').value
     }
     if((newMessage.mail == '') || (newMessage.message == '')){
         console.log('faltan datos')
@@ -61,13 +64,13 @@ socket.on('refreshMessages', messageCont => {
     const newItem = 
         `<tr>
             <th scope="row" style="color:blue">
-                ${messageCont.mail}
+                <img src=${messageCont.author.avatar} alt="avatar" width="50" height="50"></td>
             </th>
             <td>
-                ${messageCont.timestamp}
+                ${messageCont.author.nombre} ${messageCont.author.apellido}
             </td>
             <td>
-                ${messageCont.message}
+                ${messageCont.text}
             </td>
         </tr>`
     messageTable.innerHTML += newItem

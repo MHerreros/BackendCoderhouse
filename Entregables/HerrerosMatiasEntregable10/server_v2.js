@@ -27,7 +27,7 @@ let messageArray = []
 
 let usersArray = []
 
-const Contenedor = require('./simplifiedContainer')
+const Contenedor = require('./db/containers/containerSQL')
 const products = new Contenedor(productArray, optionsMariaDB, 'productos')
 const messages = new Contenedor(messageArray, optionsSQLite3, 'chat')
 
@@ -94,6 +94,8 @@ io.on('connection', socket => {
     })
 })
 
+
+// ==== FUNCION PARA TESTING ====
 const faker = require('faker')
 faker.locale = 'es'
 

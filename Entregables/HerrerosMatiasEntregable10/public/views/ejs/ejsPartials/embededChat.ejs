@@ -2,21 +2,30 @@
     <div class="modal-content">
         <div class="modal-header">
             <img src="https://cdn2.iconfinder.com/data/icons/random-set-1/467/Asset_79-128.png" alt="icono-mensaje" height="50">
-            <h2 style="text-align:left" >Centro de Mensajes</h2>
+            <h2 style="text-align:left">Centro de Mensajes</h2>
         </div>
         <div class="modal-body">
             <div>
-                <label for="title">Ingrese su email</label>
+                <label for="title">Ingrese sus Datos</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Nombre" name="nombre">
+                <br>
+                <input type="text" class="form-control" id="surnameInput" placeholder="Apellido" name="apellido">
+                <br>
+                <input type="text" class="form-control" id="aliasInput" placeholder="Alias" name="alias">
+                <br>
+                <input type="number" class="form-control" id="ageInput" placeholder="Edad (en años)" name="edad">
+                <br>
                 <input type="email" class="form-control" id="emailInput" placeholder="nombre@email.com" name="email">
                 <br>
+
             </div>
             <div>
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Mail</th>
-                            <th scope="col">Timestamp</th>
-                            <th scope="col">Message</th>
+                            <th scope="col">Avatar</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Mensaje</th>
                         </tr>
                     </thead>
                     <tbody id="messageTableBody">
@@ -24,13 +33,13 @@
                             <div>
                                 <tr>
                                     <th scope="row" style="color:blue">
-                                        <%= message.mail %>
+                                        <img src="<%= message.author.avatar %>" alt="avatar">
                                     </th>
                                     <td>
-                                        <%= message.timestamp %>
+                                        <%= message.author.nombre %> <%= message.author.apellido %>
                                     </td>
                                     <td>
-                                        <%= message.message %>
+                                        <%= message.text %>
                                     </td>
                                 </tr>
                             </div>
