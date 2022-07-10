@@ -10,6 +10,8 @@ const PORT = 8080
 const {optionsMariaDB} = require('./db/mariaDB')
 const {optionsSQLite3} = require('./db/SQLite3')
 
+// const {getAll} = require('./getAllProducts.test.js')
+
 const {Router} = express
 const apiRouter = Router()
 
@@ -39,6 +41,19 @@ app.set('view engine', 'ejs')
 
 apiRouter.get('', async (req, res) => { 
     const data3 = await products.getAll()
+    const messageCont = await messages.getAll()
+
+    return res.render('home', {
+        status:1, 
+        data3,
+        messageCont
+    })
+})
+
+// ==== TESTING ROUTE ====
+apiRouter.get('/test', async (req, res) => { 
+    const data3 = getAll(5)
+    console.log(data3)
     const messageCont = await messages.getAll()
 
     return res.render('home', {
@@ -78,3 +93,21 @@ io.on('connection', socket => {
         console.log(`Se ha desconectado el cliente con id ${socket.id}`)
     })
 })
+
+const faker = require('faker')
+faker.locale = 'es'
+
+const getAll = (arrayLength) => {
+    console.log('test requested')
+    const arrayProductos = []
+    for (i = 0; i<arrayLength; i++){
+        const newProduct = {
+            title:faker.commerce.productName(),
+            price:faker.commerce.price(),
+            thumbnail: faker.random.image(),
+            id: faker.datatype.number()
+        }
+        arrayProductos.push(newProduct)
+    }
+    return arrayProductos
+}
