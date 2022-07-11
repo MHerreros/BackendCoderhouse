@@ -7,7 +7,6 @@ const productsTable = document.getElementById('productsTableBody')
 const submitMessage = document.getElementById('submitMessage')
 const messageTable = document.getElementById('messageTableBody')
 
-
 submitProduct.addEventListener('click', (event) => {
     event.preventDefault()
     const newProduct = {
@@ -60,7 +59,9 @@ submitMessage.addEventListener('click', (event) => {
     }
 })
 
-socket.on('refreshMessages', messageCont => {
+socket.on('refreshMessages', messageCont  => {
+    // console.log(normalizedChat)
+    // const messageCont = normalizr.denormalize(normalizedChat.result, normalizrChatSchema, normalizedChat.entities)
     const newItem = 
         `<tr>
             <th scope="row" style="color:blue">

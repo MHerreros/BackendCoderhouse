@@ -7,6 +7,8 @@ const httpServer = new HttpServer(app)
 const io = new IOServer(httpServer)
 let usersArray = []
 const PORT = 8080
+const normalizr = require('normalizr')
+const normalizrChatSchema = require('./public/normalizrSchema.js')
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -35,11 +37,22 @@ app.use('/api/productos', apiRouter)
 apiRouter.get('', async (req, res) => { 
     const data3 = await products.getAll()
     const messageCont = await messages.getAll()
+    const normalizedChat = normalizr.normalize(messageCont, normalizrChatSchema)
+    
+    const origLength = JSON.stringify(messageCont).length
+    const normLength = JSON.stringify(normalizedChat).length
+
+    console.log(messageCont)
+    // console.log(normalizedChat)
+    console.log('ORIGINAL: ', origLength)
+    console.log('NORMALIZADO: ', normLength)
 
     return res.render('home', {
         status:1, 
         data3,
-        messageCont
+        messageCont,
+        origLength,
+        normLength
     })
 })
 
@@ -72,6 +85,7 @@ io.on('connection', socket => {
     })
 
     socket.on('addMessage', newMessage => {
+
         messages.save(newMessage)
         const messageCont = newMessage
         socket.emit('refreshMessages', messageCont)
