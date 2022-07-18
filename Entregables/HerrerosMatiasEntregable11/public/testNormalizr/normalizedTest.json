@@ -1,0 +1,138 @@
+{
+  "entities": {
+    "authors": {
+      "test1@email.com": {
+        "id": "test1@email.com",
+        "nombre": "Matias",
+        "apellido": "Herreros",
+        "edad": "24",
+        "alias": "Mati",
+        "avatar": "../static/icons/generic_avatar.png"
+      },
+      "test2@email.com": {
+        "id": "test2@email.com",
+        "nombre": "Juan",
+        "apellido": "Peres",
+        "edad": "21",
+        "alias": "Juan",
+        "avatar": "../static/icons/generic_avatar.png"
+      }
+    },
+    "chat": {
+      "new ObjectId(62cb4348705074ace651362e)": {
+        "_id": "new ObjectId(62cb4348705074ace651362e)",
+        "author": "test1@email.com",
+        "text": "Hola!",
+        "__v": 0
+      },
+      "new ObjectId(62cb4389a98c86688d6ebba1)": {
+        "_id": "new ObjectId(62cb4389a98c86688d6ebba1)",
+        "author": "test2@email.com",
+        "text": "Buenas!",
+        "__v": 0
+      },
+      "new ObjectId(62cb767b2e40a4a2962c4aea)": {
+        "_id": "new ObjectId(62cb767b2e40a4a2962c4aea)",
+        "author": "test2@email.com",
+        "text": "Como va?",
+        "__v": 0
+      },
+      "new ObjectId(62cb76b22e40a4a2962c4aee)": {
+        "_id": "new ObjectId(62cb76b22e40a4a2962c4aee)",
+        "author": "test1@email.com",
+        "text": "Todo bien, vos?",
+        "__v": 0
+      },
+      "new ObjectId(62cb76bb2e40a4a2962c4af0)": {
+        "_id": "new ObjectId(62cb76bb2e40a4a2962c4af0)",
+        "author": "test2@email.com",
+        "text": "Todo tranqui",
+        "__v": 0
+      },
+      "new ObjectId(62cb76c22e40a4a2962c4af2)": {
+        "_id": "new ObjectId(62cb76c22e40a4a2962c4af2)",
+        "author": "test2@email.com",
+        "text": "Te gusta el chat?",
+        "__v": 0
+      },
+      "new ObjectId(62cb76c92e40a4a2962c4af4)": {
+        "_id": "new ObjectId(62cb76c92e40a4a2962c4af4)",
+        "author": "test1@email.com",
+        "text": "Esta barbaro!!",
+        "__v": 0
+      },
+      "new ObjectId(62cb76df2e40a4a2962c4af6)": {
+        "_id": "new ObjectId(62cb76df2e40a4a2962c4af6)",
+        "author": "test2@email.com",
+        "text": "Me alegra que te guste!!",
+        "__v": 0
+      },
+      "new ObjectId(62cb77e2629afa22592f4c46)": {
+        "_id": "new ObjectId(62cb77e2629afa22592f4c46)",
+        "author": "test1@email.com",
+        "text": "Tengo que meter mucha informacion",
+        "__v": 0
+      },
+      "new ObjectId(62cb77f8629afa22592f4c48)": {
+        "_id": "new ObjectId(62cb77f8629afa22592f4c48)",
+        "author": "test1@email.com",
+        "text": "Porque necesito ver realmente si la reduccion de normalizr funciona bien",
+        "__v": 0
+      },
+      "new ObjectId(62cb780c629afa22592f4c4a)": {
+        "_id": "new ObjectId(62cb780c629afa22592f4c4a)",
+        "author": "test1@email.com",
+        "text": "El tema es que estoy escribiendo desde hoy",
+        "__v": 0
+      },
+      "new ObjectId(62cb7812629afa22592f4c4c)": {
+        "_id": "new ObjectId(62cb7812629afa22592f4c4c)",
+        "author": "test1@email.com",
+        "text": "Alargando el chat",
+        "__v": 0
+      },
+      "new ObjectId(62cb7818629afa22592f4c4e)": {
+        "_id": "new ObjectId(62cb7818629afa22592f4c4e)",
+        "author": "test1@email.com",
+        "text": "Para ver los resultados",
+        "__v": 0
+      },
+      "new ObjectId(62cb781e629afa22592f4c50)": {
+        "_id": "new ObjectId(62cb781e629afa22592f4c50)",
+        "author": "test1@email.com",
+        "text": "Pero bueno",
+        "__v": 0
+      },
+      "new ObjectId(62cb782a629afa22592f4c52)": {
+        "_id": "new ObjectId(62cb782a629afa22592f4c52)",
+        "author": "test1@email.com",
+        "text": "A esta altura ya deberia estar OK, no?",
+        "__v": 0
+      },
+      "new ObjectId(62cb7844629afa22592f4c54)": {
+        "_id": "new ObjectId(62cb7844629afa22592f4c54)",
+        "author": "test2@email.com",
+        "text": "Creeria que si...",
+        "__v": 0
+      }
+    }
+  },
+  "result": [
+    "new ObjectId(62cb4348705074ace651362e)",
+    "new ObjectId(62cb4389a98c86688d6ebba1)",
+    "new ObjectId(62cb767b2e40a4a2962c4aea)",
+    "new ObjectId(62cb76b22e40a4a2962c4aee)",
+    "new ObjectId(62cb76bb2e40a4a2962c4af0)",
+    "new ObjectId(62cb76c22e40a4a2962c4af2)",
+    "new ObjectId(62cb76c92e40a4a2962c4af4)",
+    "new ObjectId(62cb76df2e40a4a2962c4af6)",
+    "new ObjectId(62cb77e2629afa22592f4c46)",
+    "new ObjectId(62cb77f8629afa22592f4c48)",
+    "new ObjectId(62cb780c629afa22592f4c4a)",
+    "new ObjectId(62cb7812629afa22592f4c4c)",
+    "new ObjectId(62cb7818629afa22592f4c4e)",
+    "new ObjectId(62cb781e629afa22592f4c50)",
+    "new ObjectId(62cb782a629afa22592f4c52)",
+    "new ObjectId(62cb7844629afa22592f4c54)"
+  ]
+}
