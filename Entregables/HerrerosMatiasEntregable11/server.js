@@ -9,7 +9,7 @@ const io = new IOServer(httpServer)
 const session = require('express-session')
 // const sharedSession = require("express-socket.io-session")
 
-let usersArray = []
+// let usersArray = []
 
 const PORT = 8080
 
@@ -83,6 +83,7 @@ app.use('/logout', logoutRouter)
 apiRouter.get('', validateSession, async (req, res) => { 
     const data3 = await products.getAll()
     const messageCont = await messages.getAll()
+    const user = req.session.user
 
     // ==== IMPLEMENTACION NORMALIZR
     // ** Para ver los valores en pantalla hay que modificar el embededChat.ejs
@@ -99,7 +100,8 @@ apiRouter.get('', validateSession, async (req, res) => {
     return res.render('home', {
         status:1, 
         data3,
-        messageCont
+        messageCont,
+        user
     })
 })
 
@@ -114,20 +116,21 @@ loginRouter.get('', (req, res) => {
     return res.render('login')
 })
 
+loginRouter.post('/auth', validateSession, (req, res) => {
+    return res.status(202).redirect('http://localhost:8080/api/productos')
+})
+
 logoutRouter.get('', (req, res) => {
+    const user = req.session.user
     if (req.session.user && req.session.password){
         return req.session.destroy(err => {
             if (!err) {
-                return res.send({ logout: true })
+                return res.status(200).render('redirect', {user})
             }
             return res.send({ error: err })
           })
     }
     return res.status(404).redirect('http://localhost:8080/login')
-})
-
-loginRouter.post('/auth', validateSession, (req, res) => {
-    return res.status(202).redirect('http://localhost:8080/api/productos')
 })
 
  // ==== SET VIEWS CONFIG ====
@@ -161,7 +164,7 @@ server.on('error',(error) => {console.log(`Se ha detectado un error. ${error}`)}
 
 io.on('connection', socket => {
     console.log(`Nuevo cliente conectado con id ${socket.id}`)
-    usersArray.push(socket.id)
+    // usersArray.push(socket.id)
 
     socket.on('addProduct', async (newProduct) => {
         const newProductID = await products.save(newProduct)
@@ -180,7 +183,7 @@ io.on('connection', socket => {
     })
 
     socket.on('disconnect', reason => {
-        usersArray = usersArray.filter(user => user != socket.id)
+        // usersArray = usersArray.filter(user => user != socket.id)
         console.log(`Se ha desconectado el cliente con id ${socket.id}`)
     })
 })
