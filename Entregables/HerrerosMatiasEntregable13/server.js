@@ -15,6 +15,7 @@ const flash = require('connect-flash')
 
 const yargs = require('yargs/yargs')
 const dotenv = require('dotenv')
+const { fork } = require('child_process')
 
 // ==== SET EVIRONMENT VARIABLES ====
 dotenv.config()
@@ -153,11 +154,13 @@ const loginRouter = Router()
 const logoutRouter = Router()
 const signupRouter = Router()
 const infoRouter = Router()
+const randomRouter = Router()
 app.use('/api/productos', apiRouter)
 app.use('/login', loginRouter)
 app.use('/logout', logoutRouter)
 app.use('/signup', signupRouter)
 app.use('/info', infoRouter)
+app.use('/api/random', randomRouter)
 
 apiRouter.get('', async (req, res) => {
     const data3 = await products.getAll()
@@ -224,6 +227,19 @@ infoRouter.get('', async (req, res) => {
         return res.render('info', { processInfo })
     } 
     res.redirect('/login')
+})
+
+randomRouter.get('/:number?', async (req, res) => {
+    if (!req.params.number || isNan(req.params.number)){
+        const counter = 100000000
+    }
+    if(req.user){
+       const computo = fork('./computo.js')
+       computo.on('message', numberArray => {
+           return res.send(numberArray)
+       } )
+    } 
+    
 })
 
 // ==== SET VIEWS CONFIG ====
