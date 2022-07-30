@@ -14,6 +14,10 @@ const { createHash, isValidPassword } = require('./utils/bycrypt')
 const flash = require('connect-flash')
 
 const yargs = require('yargs/yargs')
+const dotenv = require('dotenv')
+
+// ==== SET EVIRONMENT VARIABLES ====
+dotenv.config()
 
 // ==== SET SERVER PORT ====
 const args = yargs(process.argv.slice(2))
@@ -29,10 +33,8 @@ let PORT = 8080
 if (typeof args.port === 'number'){
     PORT = args.port
 }
-
-  // TODO: TIENE QUE VENIR POR LINEA DE COMANDOS (USAR MINIMIST O YARGS)
-// console.log(process.argv.slice(2))
-
+// ==== SET DATABASE ====
+const uri = process.env.MONGO_URL
 
 // ==== SET CACHE STORE ====
 const MongoStore = require('connect-mongo')
@@ -63,7 +65,7 @@ app.use('/static', express.static(__dirname + '/public'))
 
 app.use(session({
     store: MongoStore.create({
-        mongoUrl: `mongodb+srv://matias:xsBZtP6jv0Bifco3@cluster0.ry76x.mongodb.net/desafios?retryWrites=true&w=majority`,
+        mongoUrl: uri,
         ttl: 60
     }),
     secret: 'qwerty',
@@ -72,8 +74,6 @@ app.use(session({
 }))
 app.use(flash())
 
-// ==== SET DATABASE ====
-const uri = "mongodb+srv://matias:xsBZtP6jv0Bifco3@cluster0.ry76x.mongodb.net/desafios?retryWrites=true&w=majority"
 
 // ==== SCHEMAS ====
 const schemaMensajes = require('./db/schema/mensajes')
