@@ -152,10 +152,12 @@ const apiRouter = Router()
 const loginRouter = Router()
 const logoutRouter = Router()
 const signupRouter = Router()
+const infoRouter = Router()
 app.use('/api/productos', apiRouter)
 app.use('/login', loginRouter)
 app.use('/logout', logoutRouter)
 app.use('/signup', signupRouter)
+app.use('/info', infoRouter)
 
 apiRouter.get('', async (req, res) => {
     const data3 = await products.getAll()
@@ -204,6 +206,24 @@ logoutRouter.get('', (req, res) => {
         })
     }
     return res.status(404).redirect('http://localhost:8080/login')
+})
+
+infoRouter.get('', async (req, res) => {
+    
+    if(req.user){
+        const processInfo = [
+            {name: "consoleArg", value: process.argv.slice(2)},
+            {name: "platformName", value: process.platform},
+            {name: "nodeVersion", value: process.version},
+            {name: "memoryUsage", value: process.memoryUsage().rss},
+            {name: "path", value: process.path},
+            {name: "processId", value: process.pid},
+            {name: "folder", value: process.cwd()}
+        ]
+        console.log(processInfo)
+        return res.render('info', { processInfo })
+    } 
+    res.redirect('/login')
 })
 
 // ==== SET VIEWS CONFIG ====
