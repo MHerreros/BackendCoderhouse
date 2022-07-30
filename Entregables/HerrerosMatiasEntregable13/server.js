@@ -13,7 +13,26 @@ const { Strategy: LocalStrategy } = require('passport-local')
 const { createHash, isValidPassword } = require('./utils/bycrypt')
 const flash = require('connect-flash')
 
-const PORT = 8080
+const yargs = require('yargs/yargs')
+
+// ==== SET SERVER PORT ====
+const args = yargs(process.argv.slice(2))
+    .alias({
+        port: 'p'
+    })
+    .default({
+        port: 8080
+    })
+    .argv
+
+let PORT = 8080
+if (typeof args.port === 'number'){
+    PORT = args.port
+}
+
+  // TODO: TIENE QUE VENIR POR LINEA DE COMANDOS (USAR MINIMIST O YARGS)
+// console.log(process.argv.slice(2))
+
 
 // ==== SET CACHE STORE ====
 const MongoStore = require('connect-mongo')
