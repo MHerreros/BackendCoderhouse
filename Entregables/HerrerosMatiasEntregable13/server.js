@@ -13,7 +13,29 @@ const { Strategy: LocalStrategy } = require('passport-local')
 const { createHash, isValidPassword } = require('./utils/bycrypt')
 const flash = require('connect-flash')
 
-const PORT = 8080
+const yargs = require('yargs/yargs')
+const dotenv = require('dotenv')
+const { fork } = require('child_process')
+
+// ==== SET EVIRONMENT VARIABLES ====
+dotenv.config()
+
+// ==== SET SERVER PORT ====
+const args = yargs(process.argv.slice(2))
+    .alias({
+        port: 'p'
+    })
+    .default({
+        port: 8080
+    })
+    .argv
+
+let PORT = 8080
+if (typeof args.port === 'number'){
+    PORT = args.port
+}
+// ==== SET DATABASE ====
+const uri = process.env.MONGO_URL
 
 // ==== SET CACHE STORE ====
 const MongoStore = require('connect-mongo')
@@ -44,7 +66,7 @@ app.use('/static', express.static(__dirname + '/public'))
 
 app.use(session({
     store: MongoStore.create({
-        mongoUrl: `mongodb+srv://matias:xsBZtP6jv0Bifco3@cluster0.ry76x.mongodb.net/desafios?retryWrites=true&w=majority`,
+        mongoUrl: uri,
         ttl: 60
     }),
     secret: 'qwerty',
@@ -53,8 +75,6 @@ app.use(session({
 }))
 app.use(flash())
 
-// ==== SET DATABASE ====
-const uri = "mongodb+srv://matias:xsBZtP6jv0Bifco3@cluster0.ry76x.mongodb.net/desafios?retryWrites=true&w=majority"
 
 // ==== SCHEMAS ====
 const schemaMensajes = require('./db/schema/mensajes')
@@ -133,10 +153,14 @@ const apiRouter = Router()
 const loginRouter = Router()
 const logoutRouter = Router()
 const signupRouter = Router()
+const infoRouter = Router()
+const randomRouter = Router()
 app.use('/api/productos', apiRouter)
 app.use('/login', loginRouter)
 app.use('/logout', logoutRouter)
 app.use('/signup', signupRouter)
+app.use('/info', infoRouter)
+app.use('/api/random', randomRouter)
 
 apiRouter.get('', async (req, res) => {
     const data3 = await products.getAll()
@@ -185,6 +209,35 @@ logoutRouter.get('', (req, res) => {
         })
     }
     return res.status(404).redirect('http://localhost:8080/login')
+})
+
+infoRouter.get('', async (req, res) => {
+    
+    if(req.user){
+        const processInfo = [
+            {name: "consoleArg", value: process.argv.slice(2)},
+            {name: "platformName", value: process.platform},
+            {name: "nodeVersion", value: process.version},
+            {name: "memoryUsage", value: process.memoryUsage().rss},
+            {name: "path", value: process.path},
+            {name: "processId", value: process.pid},
+            {name: "folder", value: process.cwd()}
+        ]
+        console.log(processInfo)
+        return res.render('info', { processInfo })
+    } 
+    res.redirect('/login')
+})
+
+randomRouter.get('/:number?', async (req, res) => {
+
+    if(req.user){
+       const computo = fork('./computo.js', [req.params.number])
+       computo.on('message', numberArray => {
+           return res.send(numberArray)
+       } )
+    } 
+    
 })
 
 // ==== SET VIEWS CONFIG ====
