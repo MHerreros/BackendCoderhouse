@@ -230,11 +230,9 @@ infoRouter.get('', async (req, res) => {
 })
 
 randomRouter.get('/:number?', async (req, res) => {
-    if (!req.params.number || isNan(req.params.number)){
-        const counter = 100000000
-    }
+
     if(req.user){
-       const computo = fork('./computo.js')
+       const computo = fork('./computo.js', [req.params.number])
        computo.on('message', numberArray => {
            return res.send(numberArray)
        } )

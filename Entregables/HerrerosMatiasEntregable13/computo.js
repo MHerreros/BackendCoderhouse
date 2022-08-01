@@ -1,13 +1,21 @@
 const calculo = () => {
-    let suma = [0,2,5,54,5,11]
-    // for (i=0; i<6e9;i++){
-    //     suma += i
-    // }
-    
-    return suma
+    let iterations = 100000000
+    if(!isNaN(Number(process.argv[2]))){
+        iterations = Number(process.argv[2])
+    }
+
+    let randomArray = []
+    let count = {}
+    for (i=0; i<iterations; i++){
+        randomArray[i] = Math.floor(Math.random() * (1000 - 1)) + 1
+    }
+
+    randomArray.forEach(element => {
+        count[element] = (count[element] || 0) + 1
+    })
+    return count
 }
-const sum = setTimeout( () => {
-    let suma = [0,2,5,54,5,11]
-    process.send(suma)
-    return}
-, 10000)
+let result = calculo()
+
+process.send(result)
+
