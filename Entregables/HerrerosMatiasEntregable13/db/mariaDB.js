@@ -1,10 +1,10 @@
 const optionsMariaDB = {
     client: 'mysql',
     connection: {
-      host: '127.0.0.1',
-      user: 'root',
-      password: '',
-      database: 'ecommerce'
+      host: process.env.MARIADB_HOST,
+      user: process.env.MARIADB_USER,
+      password: process.env.MARIADB_PASSWORD,
+      database: process.env.MARIADB_DATABASE
     }
   }
 
