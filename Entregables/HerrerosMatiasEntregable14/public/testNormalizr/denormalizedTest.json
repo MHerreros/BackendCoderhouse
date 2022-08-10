@@ -1,0 +1,210 @@
+[
+  {
+    "_id": "new ObjectId(62cb4348705074ace651362e)",
+    "author": {
+      "id": "test1@email.com",
+      "nombre": "Matias",
+      "apellido": "Herreros",
+      "edad": "24",
+      "alias": "Mati",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Hola!",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb4389a98c86688d6ebba1)",
+    "author": {
+      "id": "test2@email.com",
+      "nombre": "Juan",
+      "apellido": "Peres",
+      "edad": "21",
+      "alias": "Juan",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Buenas!",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb767b2e40a4a2962c4aea)",
+    "author": {
+      "id": "test2@email.com",
+      "nombre": "Juan",
+      "apellido": "Peres",
+      "edad": "21",
+      "alias": "Juan",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Como va?",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb76b22e40a4a2962c4aee)",
+    "author": {
+      "id": "test1@email.com",
+      "nombre": "Matias",
+      "apellido": "Herreros",
+      "edad": "24",
+      "alias": "Mati",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Todo bien, vos?",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb76bb2e40a4a2962c4af0)",
+    "author": {
+      "id": "test2@email.com",
+      "nombre": "Juan",
+      "apellido": "Peres",
+      "edad": "21",
+      "alias": "Juan",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Todo tranqui",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb76c22e40a4a2962c4af2)",
+    "author": {
+      "id": "test2@email.com",
+      "nombre": "Juan",
+      "apellido": "Peres",
+      "edad": "21",
+      "alias": "Juan",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Te gusta el chat?",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb76c92e40a4a2962c4af4)",
+    "author": {
+      "id": "test1@email.com",
+      "nombre": "Matias",
+      "apellido": "Herreros",
+      "edad": "24",
+      "alias": "Mati",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Esta barbaro!!",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb76df2e40a4a2962c4af6)",
+    "author": {
+      "id": "test2@email.com",
+      "nombre": "Juan",
+      "apellido": "Peres",
+      "edad": "21",
+      "alias": "Juan",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Me alegra que te guste!!",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb77e2629afa22592f4c46)",
+    "author": {
+      "id": "test1@email.com",
+      "nombre": "Matias",
+      "apellido": "Herreros",
+      "edad": "24",
+      "alias": "Mati",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Tengo que meter mucha informacion",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb77f8629afa22592f4c48)",
+    "author": {
+      "id": "test1@email.com",
+      "nombre": "Matias",
+      "apellido": "Herreros",
+      "edad": "24",
+      "alias": "Mati",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Porque necesito ver realmente si la reduccion de normalizr funciona bien",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb780c629afa22592f4c4a)",
+    "author": {
+      "id": "test1@email.com",
+      "nombre": "Matias",
+      "apellido": "Herreros",
+      "edad": "24",
+      "alias": "Mati",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "El tema es que estoy escribiendo desde hoy",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb7812629afa22592f4c4c)",
+    "author": {
+      "id": "test1@email.com",
+      "nombre": "Matias",
+      "apellido": "Herreros",
+      "edad": "24",
+      "alias": "Mati",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Alargando el chat",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb7818629afa22592f4c4e)",
+    "author": {
+      "id": "test1@email.com",
+      "nombre": "Matias",
+      "apellido": "Herreros",
+      "edad": "24",
+      "alias": "Mati",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Para ver los resultados",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb781e629afa22592f4c50)",
+    "author": {
+      "id": "test1@email.com",
+      "nombre": "Matias",
+      "apellido": "Herreros",
+      "edad": "24",
+      "alias": "Mati",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Pero bueno",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb782a629afa22592f4c52)",
+    "author": {
+      "id": "test1@email.com",
+      "nombre": "Matias",
+      "apellido": "Herreros",
+      "edad": "24",
+      "alias": "Mati",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "A esta altura ya deberia estar OK, no?",
+    "__v": 0
+  },
+  {
+    "_id": "new ObjectId(62cb7844629afa22592f4c54)",
+    "author": {
+      "id": "test2@email.com",
+      "nombre": "Juan",
+      "apellido": "Peres",
+      "edad": "21",
+      "alias": "Juan",
+      "avatar": "../static/icons/generic_avatar.png"
+    },
+    "text": "Creeria que si...",
+    "__v": 0
+  }
+]
