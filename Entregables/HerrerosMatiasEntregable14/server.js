@@ -17,16 +17,21 @@ const yargs = require('yargs/yargs')
 const dotenv = require('dotenv')
 const { fork } = require('child_process')
 
+const cluster = require('cluster')
+const numCPUs = require('os').cpus().length
+
 // ==== SET EVIRONMENT VARIABLES ====
 dotenv.config()
 
 // ==== SET SERVER PORT ====
 const args = yargs(process.argv.slice(2))
     .alias({
-        port: 'p'
+        port: 'p',
+        balancer: 'b'
     })
     .default({
-        port: 8080
+        port: 8080,
+        balancer: 'FORK'
     })
     .argv
 
@@ -34,6 +39,9 @@ let PORT = 8080
 if (typeof args.port === 'number'){
     PORT = args.port
 }
+
+const loadBalancer = args.balancer
+
 // ==== SET DATABASE ====
 const uri = process.env.MONGO_URL
 
@@ -162,6 +170,8 @@ app.use('/signup', signupRouter)
 app.use('/info', infoRouter)
 app.use('/api/random', randomRouter)
 
+// ==== ENDPOINTS ====
+
 apiRouter.get('', async (req, res) => {
     const data3 = await products.getAll()
     const messageCont = await messages.getAll()
@@ -221,7 +231,8 @@ infoRouter.get('', async (req, res) => {
             {name: "memoryUsage", value: process.memoryUsage().rss},
             {name: "path", value: process.path},
             {name: "processId", value: process.pid},
-            {name: "folder", value: process.cwd()}
+            {name: "folder", value: process.cwd()},
+            {name: "systemCores", value: numCPUs}
         ]
         console.log(processInfo)
         return res.render('info', { processInfo })
@@ -230,14 +241,13 @@ infoRouter.get('', async (req, res) => {
 })
 
 randomRouter.get('/:number?', async (req, res) => {
-
-    if(req.user){
-       const computo = fork('./computo.js', [req.params.number])
-       computo.on('message', numberArray => {
-           return res.send(numberArray)
-       } )
-    } 
     
+    if(req.user){
+        const computo = fork('./computo.js', [req.params.number])
+        computo.on('message', numberArray => {
+            return res.send(numberArray)
+        } )
+    } 
 })
 
 // ==== SET VIEWS CONFIG ====
@@ -249,11 +259,32 @@ app.all('*', (req, res) => {
     return res.status(404).json(`Ruta '${req.path}' no encontrada.`)
 })
 
-const server = httpServer.listen(PORT, () => {
-    console.log(`Servidor ejecutando en la direccion ${server.address().port}`)
-})
+if (loadBalancer === 'CLUSTER' && cluster.isMaster){
+    
+    console.log(`Nodo MASTER ${process.pid} corriendo`)
+    
+    for( let i = 0; i < numCPUs; i++) {
+        cluster.fork()
+    }
+    
+    cluster.on('exit', (worker, code, signal) => {
+        console.log(`WORKER ${worker.process.pid} finalizado`)
+    })
 
-server.on('error', (error) => { console.log(`Se ha detectado un error. ${error}`) })
+    cluster.on('listening', (worker, address) => {
+        console.log(`WORKER ${worker.process.pid} is listening in port ${address.port}`)
+    })
+
+} else {
+    // console.log(`Nodo WORKER corriendo en el proceso ${process.pid}`)
+            
+    const server = app.listen(PORT, () => {
+        console.log(`Servidor ejecutando en la direccion ${server.address().port} y utilizando el balanceador de carga ${loadBalancer}. Id de proceso: ${process.pid}`)
+    })
+    
+    server.on('error', (error) => { console.log(`Se ha detectado un error. ${error}`) }) 
+      
+}  
 
 // ==== SET SOCKET SERVER ====
 io.on('connection', socket => {
