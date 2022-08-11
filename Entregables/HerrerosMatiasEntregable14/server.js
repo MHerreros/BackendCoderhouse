@@ -312,3 +312,14 @@ io.on('connection', socket => {
         console.log(`Se ha desconectado el cliente con id ${socket.id}`)
     })
 })
+
+
+// ==== COMENTARIOS PARA PROXY CON NGINX ====
+/* Esta configurada una instancia de AWS EC2 en donde se corre una imagen de Ubuntu. 
+En dicha virtual machine se clono el repo de github. 
+Se instalaron las dependencias del Entregable 14. 
+Se realizo la configuracion de NGINX (sudo vim /etc/nginx/sites-available/default). 
+La ruta basde del proxy (xx.xxx.xx) apunta a localhost:8082. En local host 8082 (y a traves de PM2) esta corriendo el servidor.
+Esta implementacion funciona bien PERO hay que modificar el codigo de las VIEWS. Los forms de las VIEWS apuntan a localhost:8080 (HARDCODEADO).
+Se deben modificar las views para que apunten donde sea necesario.
+*/
