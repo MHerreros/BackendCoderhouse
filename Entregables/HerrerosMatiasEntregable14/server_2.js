@@ -67,7 +67,7 @@ app.all('*', (req, res) => {
     return res.status(404).json(`Ruta '${req.path}' no encontrada.`)
 })
 
-if (loadBalancer === 'CLUSTER'){
+if (loadBalancer === 'FORK'){
     if (cluster.isMaster) {
         console.log(`Nodo primario ${process.pid} corriendo`)
       
@@ -82,7 +82,7 @@ if (loadBalancer === 'CLUSTER'){
         console.log(`Nodo worker corriendo en el proceso ${process.pid}`)
               
         const server = app.listen(PORT, () => {
-            console.log(`Servidor ejecutando en la direccion ${server.address().port} y utilizando el balanceador de carga ${loadBalancer}`)
+            console.log(`Servidor ejecutando en la direccion ${server.address().port} y utilizando el balanceador de carga ${loadBalancer}. Id de proceso: ${process.pid}`)
         })
         
         server.on('error', (error) => { console.log(`Se ha detectado un error. ${error}`) }) 

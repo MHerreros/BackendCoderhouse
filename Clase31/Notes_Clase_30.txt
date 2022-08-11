@@ -1,0 +1,20 @@
+PROXY: servidor itnermediario que permite entre otras cosas:
+    balancear carga
+    aplicar middlewares (autenticacion x ej)
+    aislar las partres en una  peticion (seguridad, el server no sabe quien le hace el request x ej)
+    cachear informacion para que no haya que ir a buscarla al backend necesariamente
+
+TIPOS DE PROXY:
+    Directo: Usuarios => Proxy => Internet => Servidores Backend
+    Reverso: Usuarios => Internet => Proxy => Servidores Backend
+
+    Estos dos tipos de arquitectura pueden combinarse.
+
+BENEFICIOS DE UN PROXY REVERSO EN BACKEND:
+    Se pueden usar librerias o hacerlo a mano.
+    1) Balanceador de Carga: unioco punto de entrada. Se van redirijiendo a disitnots servidores.
+    2) Seguridad: se oculta la IP del servidor.
+    3) Caching: archivos estraticos pueden almacernase en memoria cache en el proxy reverso. Se puede confirgurar una cache que este 'viva' por XX horas. Esto permite quitar carga al sistema backend.
+    4) Compresion: minimizar las respuestas que hay entre el proxy y el backend. Se comprime la transmision de informacion entre server y proxy.
+    5) Cifrado SSL Optmizado (HTTPS): con un proxy reverso se puede implementar. Se puede proteger con HTTPS la transmision via internet hasta el proxy y luego la transmision del proxy al server puede ir sin proteccion. IOncluso puede que el servidor no este en internet sino que este en una red local.
+    6) Monitoreo y Registro de Treafico: llevar auditoria / monitoreo del sistema. Sirve cuando tenemos levantados varios servidores y queremos tener ciertas metricas dfe uso por ejemplo. En vez de contar ingresos  en cada servidor, se cuentan ingresos en el proxy (es decir, antes de que redirijan los requests a los servidores)
