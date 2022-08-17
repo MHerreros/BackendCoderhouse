@@ -1,0 +1,41 @@
+[2022-08-17T20:43:09.252] [WARN] warning -  GET
+[2022-08-17T20:43:10.709] [WARN] warning -  GET
+[2022-08-17T20:43:11.372] [WARN] warning -  GET
+[2022-08-17T20:43:22.731] [WARN] warning - /api/productos/all GET
+[2022-08-17T20:43:24.785] [WARN] warning - /api/productos/all GET
+[2022-08-17T20:43:25.673] [WARN] warning - /api/productos/all GET
+[2022-08-17T20:43:31.520] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:43:40.432] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:43:40.675] [WARN] warning - /api/google.com GET
+[2022-08-17T20:43:40.694] [WARN] warning - /api/ass GET
+[2022-08-17T20:43:51.763] [WARN] warning - /api/ass GET
+[2022-08-17T20:43:51.765] [WARN] warning - /api/google.com GET
+[2022-08-17T20:43:51.768] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:44:49.343] [WARN] warning - /api/ass GET
+[2022-08-17T20:44:49.349] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:44:49.354] [WARN] warning - /api/google.com GET
+[2022-08-17T20:49:00.531] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:49:11.070] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:49:11.324] [WARN] warning - /api/ass GET
+[2022-08-17T20:49:11.335] [WARN] warning - /api/google.com GET
+[2022-08-17T20:49:23.072] [WARN] warning - /api/ass GET
+[2022-08-17T20:49:23.075] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:49:23.181] [WARN] warning - /api/google.com GET
+[2022-08-17T20:52:05.423] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:52:08.537] [WARN] warning - /api/google.com GET
+[2022-08-17T20:52:08.608] [WARN] warning - /api/ass GET
+[2022-08-17T20:52:08.750] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:52:13.941] [WARN] warning - /api/ass GET
+[2022-08-17T20:52:13.943] [WARN] warning - /api/google.com GET
+[2022-08-17T20:52:14.045] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:52:14.513] [WARN] warning - /api/ass GET
+[2022-08-17T20:52:14.515] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:52:14.600] [WARN] warning - /api/google.com GET
+[2022-08-17T20:52:14.974] [WARN] warning - /api/ass GET
+[2022-08-17T20:52:14.977] [WARN] warning - /api/google.com GET
+[2022-08-17T20:52:15.069] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-17T20:52:22.197] [WARN] warning - /api/productoss GET
+[2022-08-17T20:52:43.772] [WARN] warning - /api/productoss GET
+[2022-08-17T20:53:29.930] [WARN] warning - /api/productoss GET
+[2022-08-17T20:53:40.771] [WARN] warning - /api/productoss GET
+[2022-08-17T20:53:42.600] [WARN] warning - /api/productoss GET
