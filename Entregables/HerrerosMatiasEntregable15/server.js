@@ -20,6 +20,8 @@ const { fork } = require('child_process')
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
 
+const compression = require('compression')
+
 // ==== SET EVIRONMENT VARIABLES ====
 dotenv.config()
 
@@ -82,7 +84,6 @@ app.use(session({
     saveUninitialized: true
 }))
 app.use(flash())
-
 
 // ==== SCHEMAS ====
 const schemaMensajes = require('./db/schema/mensajes')
@@ -234,7 +235,6 @@ infoRouter.get('', async (req, res) => {
             {name: "folder", value: process.cwd()},
             {name: "systemCores", value: numCPUs}
         ]
-        console.log(processInfo)
         return res.render('info', { processInfo })
     } 
     res.redirect('/login')
