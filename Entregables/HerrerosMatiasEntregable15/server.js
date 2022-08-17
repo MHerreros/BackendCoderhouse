@@ -21,6 +21,7 @@ const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
 
 const compression = require('compression')
+const log4js = require('log4js')
 
 // ==== SET EVIRONMENT VARIABLES ====
 dotenv.config()
@@ -46,6 +47,25 @@ const loadBalancer = args.balancer
 
 // ==== SET DATABASE ====
 const uri = process.env.MONGO_URL
+
+// ==== SET LOGGER CONFIG ====
+log4js.configure({
+    appenders: {
+      consoleLogger: { type: "console" },
+      warningsFile: { type: 'file', filename: 'warn.log' },
+      errorsFile: { type: 'file', filename: 'error.log' }
+    },
+    categories: {
+      default: { appenders: ["consoleLogger"], level: "info" },
+      warning: { appenders: ["consoleLogger", "warningsFile"], level: "warn" },
+      error: { appenders: ["consoleLogger", "errorsFile"], level: "error" }
+    }
+   })
+
+const consoleLogger = log4js.getLogger('default')
+const warningLogger = log4js.getLogger('warning')
+const errorLogger = log4js.getLogger('error')
+
 
 // ==== SET CACHE STORE ====
 const MongoStore = require('connect-mongo')
@@ -174,42 +194,57 @@ app.use('/api/random', randomRouter)
 // ==== ENDPOINTS ====
 
 apiRouter.get('', async (req, res) => {
-    const data3 = await products.getAll()
-    const messageCont = await messages.getAll()
-    
-    if(req.user){
-        const user = req.user.email
-        return res.render('home', {
-            status: 1,
-            data3,
-            messageCont,
-            user
-        })
-    } 
-    res.redirect('/login')
+    consoleLogger.info(req.baseUrl, req.method)
+    try { 
+        const data3 = await products.getAll()
+        const messageCont = await messages.getAll()
+        
+        if(req.user){
+            const user = req.user.email
+            return res.render('home', {
+                status: 1,
+                data3,
+                messageCont,
+                user
+            })
+        } 
+        res.redirect('/login')
+    } catch {
+        errorLogger.error('Error')
+        throw new Error()
+    }
     })
 
 loginRouter.get('', (req, res) => {
+    consoleLogger.info(req.baseUrl, req.method)
+
     return res.render('login', { message: req.flash('error') })
 })
 
-loginRouter.post('', passport.authenticate('login', {
-    successRedirect: '/api/productos',
-    failureRedirect: '/login',
-    failureFlash: true
-  }))
+loginRouter.post('',     
+    passport.authenticate('login', {
+        successRedirect: '/api/productos',
+        failureRedirect: '/login',
+        failureFlash: true
+    }), (req, res) => {consoleLogger.info(req.baseUrl, req.method)}
+)
 
 signupRouter.get('', (req, res) => {
+    consoleLogger.info(req.baseUrl, req.method)
     return res.render('signup', { message: req.flash('error') })
 })
 
-signupRouter.post('', passport.authenticate('signup', {
-    successRedirect: '/login',
-    failureRedirect: '/signup',
-    failureFlash: true
-  }))
+signupRouter.post('', 
+    passport.authenticate('signup', {
+        successRedirect: '/login',
+        failureRedirect: '/signup',
+        failureFlash: true
+  }),
+    (req, res) => {consoleLogger.info(req.baseUrl, req.method)}
+)
 
 logoutRouter.get('', (req, res) => {
+    consoleLogger.info(req.baseUrl, req.method)
     const user = req.session.user
     if (req.session.user && req.session.password) {
         return req.session.destroy(err => {
@@ -222,8 +257,9 @@ logoutRouter.get('', (req, res) => {
     return res.status(404).redirect('http://localhost:8080/login')
 })
 
-infoRouter.get('', async (req, res) => {
-    
+infoRouter.get('', compression(), async (req, res) => {
+    consoleLogger.info(req.baseUrl, req.method)
+
     if(req.user){
         const processInfo = [
             {name: "consoleArg", value: process.argv.slice(2)},
@@ -241,7 +277,8 @@ infoRouter.get('', async (req, res) => {
 })
 
 randomRouter.get('/:number?', async (req, res) => {
-    
+    consoleLogger.info(req.baseUrl, req.method)
+
     if(req.user){
         const computo = fork('./computo.js', [req.params.number])
         computo.on('message', numberArray => {
@@ -256,6 +293,8 @@ app.set('view engine', 'ejs')
 
 // ==== SET HTTP SERVER ====
 app.all('*', (req, res) => {
+    warningLogger.warn(req.url, req.method)
+    errorLogger.error('ERROR')
     return res.status(404).json(`Ruta '${req.path}' no encontrada.`)
 })
 
@@ -282,7 +321,9 @@ if (loadBalancer === 'CLUSTER' && cluster.isMaster){
         console.log(`Servidor ejecutando en la direccion ${server.address().port} y utilizando el balanceador de carga ${loadBalancer}. Id de proceso: ${process.pid}`)
     })
     
-    server.on('error', (error) => { console.log(`Se ha detectado un error. ${error}`) }) 
+    server.on('error', (error) => { 
+        errorLogger.error(error)
+        console.log(`Se ha detectado un error. ${error}`) }) 
       
 }  
 
