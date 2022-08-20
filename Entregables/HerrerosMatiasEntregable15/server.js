@@ -259,7 +259,26 @@ logoutRouter.get('', (req, res) => {
 
 infoRouter.get('', compression(), async (req, res) => {
     consoleLogger.info(req.baseUrl, req.method)
-    // console.log('TEST')
+    if(req.user){
+        const processInfo = [
+            {name: "consoleArg", value: process.argv.slice(2)},
+            {name: "platformName", value: process.platform},
+            {name: "nodeVersion", value: process.version},
+            {name: "memoryUsage", value: process.memoryUsage().rss},
+            {name: "path", value: process.path},
+            {name: "processId", value: process.pid},
+            {name: "folder", value: process.cwd()},
+            {name: "systemCores", value: numCPUs}
+        ]
+        return res.render('info', { processInfo })
+    } 
+    res.redirect('/login')
+})
+
+// ==== INFO ROUTERT CON CONSOLE LOG ====
+infoRouter.get('/true', compression(), async (req, res) => {
+    consoleLogger.info(req.baseUrl, req.method)
+    console.log('TEST')
     if(req.user){
         const processInfo = [
             {name: "consoleArg", value: process.argv.slice(2)},
