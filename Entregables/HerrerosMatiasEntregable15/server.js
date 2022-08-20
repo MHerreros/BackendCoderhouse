@@ -52,8 +52,8 @@ const uri = process.env.MONGO_URL
 log4js.configure({
     appenders: {
       consoleLogger: { type: "console" },
-      warningsFile: { type: 'file', filename: 'warn.log' },
-      errorsFile: { type: 'file', filename: 'error.log' }
+      warningsFile: { type: 'file', filename: './logs/warn.log' },
+      errorsFile: { type: 'file', filename: './logs/error.log' }
     },
     categories: {
       default: { appenders: ["consoleLogger"], level: "info" },
@@ -97,7 +97,7 @@ app.use('/static', express.static(__dirname + '/public'))
 app.use(session({
     store: MongoStore.create({
         mongoUrl: uri,
-        ttl: 60
+        ttl: 3600
     }),
     secret: 'qwerty',
     resave: true,
@@ -259,7 +259,26 @@ logoutRouter.get('', (req, res) => {
 
 infoRouter.get('', compression(), async (req, res) => {
     consoleLogger.info(req.baseUrl, req.method)
+    if(req.user){
+        const processInfo = [
+            {name: "consoleArg", value: process.argv.slice(2)},
+            {name: "platformName", value: process.platform},
+            {name: "nodeVersion", value: process.version},
+            {name: "memoryUsage", value: process.memoryUsage().rss},
+            {name: "path", value: process.path},
+            {name: "processId", value: process.pid},
+            {name: "folder", value: process.cwd()},
+            {name: "systemCores", value: numCPUs}
+        ]
+        return res.render('info', { processInfo })
+    } 
+    res.redirect('/login')
+})
 
+// ==== INFO ROUTERT CON CONSOLE LOG ====
+infoRouter.get('/true', compression(), async (req, res) => {
+    consoleLogger.info(req.baseUrl, req.method)
+    console.log('TEST')
     if(req.user){
         const processInfo = [
             {name: "consoleArg", value: process.argv.slice(2)},
@@ -294,7 +313,7 @@ app.set('view engine', 'ejs')
 // ==== SET HTTP SERVER ====
 app.all('*', (req, res) => {
     warningLogger.warn(req.url, req.method)
-    errorLogger.error('ERROR')
+    // errorLogger.error('ERROR')
     return res.status(404).json(`Ruta '${req.path}' no encontrada.`)
 })
 
