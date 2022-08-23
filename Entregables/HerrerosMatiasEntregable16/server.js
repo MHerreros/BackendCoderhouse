@@ -38,10 +38,11 @@ const args = yargs(process.argv.slice(2))
     })
     .argv
 
-let PORT = 8080
-if (typeof args.port === 'number'){
-    PORT = args.port
-}
+// let PORT = 8080
+// if (typeof args.port === 'number'){
+//     PORT = args.port
+// }
+const PORT = process.env.PORT || 8080
 
 const loadBalancer = args.balancer
 
@@ -86,7 +87,7 @@ const validateSession = (req, res, next) => {
         return next()
     }
     console.log(`No existe el usuario. Inicie sesion.`)
-    return res.status(401).redirect('http://localhost:8080/login')
+    return res.status(401).redirect('/login')
 }
 
 // ==== SET MIDDLEWARES ====
@@ -192,7 +193,9 @@ app.use('/info', infoRouter)
 app.use('/api/random', randomRouter)
 
 // ==== ENDPOINTS ====
-
+app.get('', (req, res) => {
+    res.redirect('/login')
+})
 apiRouter.get('', async (req, res) => {
     consoleLogger.info(req.baseUrl, req.method)
     try { 
@@ -254,7 +257,7 @@ logoutRouter.get('', (req, res) => {
             return res.send({ error: err })
         })
     }
-    return res.status(404).redirect('http://localhost:8080/login')
+    return res.status(404).redirect('/login')
 })
 
 infoRouter.get('', compression(), async (req, res) => {
@@ -336,7 +339,7 @@ if (loadBalancer === 'CLUSTER' && cluster.isMaster){
 } else {
     // console.log(`Nodo WORKER corriendo en el proceso ${process.pid}`)
             
-    const server = app.listen(PORT, () => {
+    const server = httpServer.listen(PORT, () => {
         console.log(`Servidor ejecutando en la direccion ${server.address().port} y utilizando el balanceador de carga ${loadBalancer}. Id de proceso: ${process.pid}`)
     })
     
@@ -344,34 +347,34 @@ if (loadBalancer === 'CLUSTER' && cluster.isMaster){
         errorLogger.error(error)
         console.log(`Se ha detectado un error. ${error}`) }) 
       
+    // ==== SET SOCKET SERVER ====
+    io.on('connection', socket => {
+        console.log(`Nuevo cliente conectado con id ${socket.id}`)
+        // usersArray.push(socket.id)
+    
+        socket.on('addProduct', async (newProduct) => {
+            const newProductID = await products.save(newProduct)
+            const data3 = newProduct
+            data3.id = newProductID
+            socket.emit('refreshList', data3)
+            socket.broadcast.emit('refreshList', data3)
+        })
+    
+        socket.on('addMessage', newMessage => {
+    
+            messages.save(newMessage)
+            const messageCont = newMessage
+            socket.emit('refreshMessages', messageCont)
+            socket.broadcast.emit('refreshMessages', messageCont)
+        })
+    
+        socket.on('disconnect', reason => {
+            // usersArray = usersArray.filter(user => user != socket.id)
+            console.log(`Se ha desconectado el cliente con id ${socket.id}`)
+        })
+    })
 }  
 
-// ==== SET SOCKET SERVER ====
-io.on('connection', socket => {
-    console.log(`Nuevo cliente conectado con id ${socket.id}`)
-    // usersArray.push(socket.id)
-
-    socket.on('addProduct', async (newProduct) => {
-        const newProductID = await products.save(newProduct)
-        const data3 = newProduct
-        data3.id = newProductID
-        socket.emit('refreshList', data3)
-        socket.broadcast.emit('refreshList', data3)
-    })
-
-    socket.on('addMessage', newMessage => {
-
-        messages.save(newMessage)
-        const messageCont = newMessage
-        socket.emit('refreshMessages', messageCont)
-        socket.broadcast.emit('refreshMessages', messageCont)
-    })
-
-    socket.on('disconnect', reason => {
-        // usersArray = usersArray.filter(user => user != socket.id)
-        console.log(`Se ha desconectado el cliente con id ${socket.id}`)
-    })
-})
 
 
 // ==== COMENTARIOS PARA PROXY CON NGINX ====
