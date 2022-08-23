@@ -4024,3 +4024,4 @@
 [2022-08-22T21:07:06.556] [WARN] warning - /favicon.ico GET
 [2022-08-22T21:07:08.887] [WARN] warning - /socket.io/socket.io.js GET
 [2022-08-22T21:08:46.252] [WARN] warning - /socket.io/socket.io.js GET
+[2022-08-23T00:11:37.605] [WARN] warning - /api/productos/all GET
