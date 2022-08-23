@@ -278,7 +278,7 @@ if (loadBalancer === 'CLUSTER' && cluster.isMaster){
 } else {
     // console.log(`Nodo WORKER corriendo en el proceso ${process.pid}`)
             
-    const server = app.listen(PORT, () => {
+    const server = httpServer.listen(PORT, () => {
         console.log(`Servidor ejecutando en la direccion ${server.address().port} y utilizando el balanceador de carga ${loadBalancer}. Id de proceso: ${process.pid}`)
     })
     
