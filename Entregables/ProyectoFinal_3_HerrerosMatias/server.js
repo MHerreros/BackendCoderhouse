@@ -3,26 +3,40 @@ const { Server: HttpServer } = require('http')
 
 const productsRouter = require('./router/productosRouter')
 const carritoRouter = require('./router/carritosRouter')
+const userRouter = require('./router/userRouter.js')
 
 const app = express()
 const httpServer = new HttpServer(app)
 
-const PORT = process.env.PORT || 8080
+const dotenv = require('dotenv')
+dotenv.config()
 
-// const db = require('../mongoDb')
-// const productoModel = require('../schema/productos')
-// const carritoModel = require('../schema/carrito')
+const PORT = process.env.PORT || 8080
+const uri = process.env.MONGO_URL
+
+const MongoStore = require('connect-mongo')
+const session = require('express-session')
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.use('/static', express.static(__dirname + '/public'))
 
-// app.set('views', './views/ejs')
-// app.set('view engine', 'ejs')
+app.use(session({
+    store: MongoStore.create({
+        mongoUrl: uri,
+        ttl: 3600
+    }),
+    secret: 'qwerty',
+    resave: true,
+    saveUninitialized: true
+}))
 
+// Routers
 app.use('/api/productos', productsRouter)
 app.use('/api/carrito', carritoRouter)
+app.use('/users', userRouter)
+
 
 // Respuesta por default cuando no encuentra la ruta especificada
 app.all('*', (req, res) => {
@@ -34,28 +48,3 @@ const server = httpServer.listen(PORT, () => {
 })
 
 server.on('error',(error) => {console.error(`Se ha detectado un error: ${error.message}`)})
-
-// io.on('connection', socket => {
-//     console.log(`Nuevo cliente conectado con id ${socket.id}`)
-//     usersArray.push(socket.id)
-
-//     socket.on('addProduct', async (newProduct) => {
-//         await products.save(newProduct, 'BDDproducts.txt')
-//         console.log('PASO 2')
-//         const data3 = newProduct
-//         socket.emit('refreshList', data3)
-//         socket.broadcast.emit('refreshList', data3)
-//     })
-
-//     socket.on('addMessage', newMessage => {
-//         messages.save(newMessage,'BDDchat.txt')
-//         const messageCont = newMessage
-//         socket.emit('refreshMessages', messageCont)
-//         socket.broadcast.emit('refreshMessages', messageCont)
-//     })
-
-//     socket.on('disconnect', reason => {
-//         usersArray = usersArray.filter(user => user != socket.id)
-//         console.log(`Se ha desconectado el cliente con id ${socket.id}`)
-//     })
-// })

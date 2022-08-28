@@ -1,7 +1,10 @@
+const dotenv = require('dotenv')
+dotenv.config()
+const uri = process.env.MONGO_URL
 // SCHEMAS
 const schemaCarrito = require('../schema/carrito')
 const schemaProducto = require('../schema/productos')
-const uri = "mongodb+srv://matias:xsBZtP6jv0Bifco3@cluster0.ry76x.mongodb.net/ecommerce?retryWrites=true&w=majority"
+const schemaUsuario = require('../schema/usuarios')
 
 // DAOS PRODUCTO
 // Instancia de los Contenedores de Productos para distintos archivos
@@ -17,14 +20,19 @@ const CarritosDAOMemoria = require('./carritos/CarritosDAOMemoria')
 const CarritosDAOMongoDB = require('./carritos/CarritosDAOMongoDB')
 const CarritosDAOFirebase = require('./carritos/CarritosDAOFirebase')
 
+// DAOS USUARIOS
+// Instancia de los Contenedores de Usuarios para distintos archivos
+const UsuariosDAOMongoDB = require('./usuarios/UsuariosDAOMongoDB')
+
+
 const getStorage = () => {
   const storage = process.env.STORAGE || 'archivo'
-  
+
   switch (storage) {
     case 'archivo':
       return {
         products: new ProductosDAOArchivo(),
-        carts: new CarritosDAOArchivo()
+        carts: new CarritosDAOArchivo(),
       }
       break
 
@@ -38,7 +46,8 @@ const getStorage = () => {
     case 'mongodb':
       return {
         products: new ProductosDAOMongoDB('producto', schemaProducto, uri),
-        carts: new CarritosDAOMongoDB('carrito', schemaCarrito, uri)
+        carts: new CarritosDAOMongoDB('carrito', schemaCarrito, uri),
+        users: new UsuariosDAOMongoDB('usuarios', schemaUsuario, uri)
       }
       break
 
