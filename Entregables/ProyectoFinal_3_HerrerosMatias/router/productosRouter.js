@@ -3,6 +3,8 @@ const {Router} = express
 const getStorage = require('../db/daos')
 const productsRouter = Router()
 
+const validateSession = require('../utils/sessionValidator')
+
 const authorizationLevel = 0
 
 const { products: storage } = getStorage()
@@ -10,7 +12,7 @@ const { products: storage } = getStorage()
 // RUTAS PRODUCTO
 
 // Trae listado de productos o un producto especifico del listado segun su ID
-productsRouter.get('/:id?', async (req, res) => { 
+productsRouter.get('/:id?', validateSession, async (req, res) => { 
     if(authorizationLevel == 0 || authorizationLevel == 1){
         if(req.params.id){
             try{
@@ -32,7 +34,7 @@ productsRouter.get('/:id?', async (req, res) => {
 })
 
 // Agrega un producto al listado de productos
-productsRouter.post('', async (req, res) => {
+productsRouter.post('', validateSession, async (req, res) => {
     if(authorizationLevel == 0){
         try{
             const answer = await storage.save(req.body)
@@ -46,7 +48,7 @@ productsRouter.post('', async (req, res) => {
 })
 
 // Modifica un procucto del listado de productos segun su ID
-productsRouter.put('/:id', async (req, res) => {
+productsRouter.put('/:id', validateSession, async (req, res) => {
     if(authorizationLevel == 0){
         try {
             // NOTA: data debe ser un objeto JSON con los atributos: nombre, descripcion, codigo, precio, stock, imagen.
@@ -61,7 +63,7 @@ productsRouter.put('/:id', async (req, res) => {
 })
 
 // Elimina un producto del listado de productos segun su ID
-productsRouter.delete('/:id', async (req, res) => {
+productsRouter.delete('/:id', validateSession, async (req, res) => {
     if(authorizationLevel == 0){
         try {
             const answer = await storage.deleteById((req.params.id), null)

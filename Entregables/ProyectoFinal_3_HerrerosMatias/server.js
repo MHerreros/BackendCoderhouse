@@ -16,6 +16,7 @@ const uri = process.env.MONGO_URL
 
 const MongoStore = require('connect-mongo')
 const session = require('express-session')
+// const { validateSession } = require('./utils/sessionValidator')
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -36,7 +37,6 @@ app.use(session({
 app.use('/api/productos', productsRouter)
 app.use('/api/carrito', carritoRouter)
 app.use('/users', userRouter)
-
 
 // Respuesta por default cuando no encuentra la ruta especificada
 app.all('*', (req, res) => {

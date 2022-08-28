@@ -9,7 +9,7 @@ const usuarioSchema = new Schema({
   direccion: { type: String, required: true },
   telefono: { type: Number, required: true },
   foto: { type: String, required: true },
-  timestamp: {type: String, required: true}
+  timestamp: { type: String, required: true }
 })
 
 module.exports = usuarioSchema
