@@ -51,7 +51,7 @@ passport.use(
         passReqToCallback: true
     }, 
     (req, username, password, done) => {
-        return storage.findUser({username})
+        return storage.findUser({ username })
             .then(user => {
                 if (user) {
                     throw new Error(`El usuario ${user.username} ya existe`)
@@ -69,6 +69,27 @@ passport.use(
     )
 )
 
+// Login Strategy
+passport.use(
+    'login', 
+    new LocalStrategy(
+        (username, password, done) => {
+        return storage.findUser({ username })
+        .then(user => {
+            if (!user) {
+                throw new Error({ message: `No se encontro el usuario "${username}"` })
+            }
+
+            if (!isValidPassword(user.password, password)) {
+                throw new Error('Contraseña incorrecta')
+            }
+
+            return done(null, user)
+        })
+        .catch(err => done(err))
+    })
+)
+
 // RUTAS CRUD USUARIOS
 
 // Crea nuevo usuario
@@ -78,18 +99,24 @@ userRouter.post('/create',
         failureRedirect: '/users/create',
         failureFlash: true
   }),
-    (req, res) => {res.status(201).json({message: 'Usuario agregado con exito'})
-    // if(authorizationLevel == 0 || authorizationLevel == 1){
-    //     try{
-    //         req.body.password = createHash(req.body.password)
-    //         const answer = await storage.save(req.body)
-    //         return res.status(201).json(answer)
-    //     } catch (error) {
-    //         return res.status(500).json(error.message)
-    //     }
-    // } else {
-    //     return res.status(401).json({url: req.originalUrl, method: req.method, status: 401, error: 'Unauthorized', message:`Ruta '${req.originalUrl}', metodo '${req.method}' no autorizada para el usuario.`})
-    // }
+    (req, res) => { res.status(201).json({ message: 'Usuario agregado con exito' })
+})
+
+// Login usuario
+userRouter.post('/login',     
+    passport.authenticate('login', {
+        successRedirect: '/home',
+        failureRedirect: '/login',
+        failureFlash: true
+    }), (req, res) => { res.status(202).json({ message: 'Sesion iniciada con exito' }) }
+)
+
+// Logout usuario
+userRouter.post('/logout', (req, res) => {
+    req.session.destroy(err =>  {
+        if(err){ return next(err) }
+        res.redirect('/users/login')
+    })
 })
 
 // // Borra carrito especifico
