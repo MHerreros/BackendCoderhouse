@@ -1,6 +1,8 @@
 const { ClientSession } = require('mongodb')
 const mongoose = require('mongoose')
 
+const { dbLogger } = require('../../utils/log4jsConfig')
+
 class containerMongoDB {
 
     constructor(collectionName, schema, uri) {
@@ -15,10 +17,10 @@ class containerMongoDB {
                 useNewUrlParser: true,
                 useUnifiedTopology: true
             })
-            console.log("Conectado a MongoDB")
+            dbLogger.info("Conectado a DB: Mongo")
         }
         catch (error) {
-            throw new Error(`Error en conexion a mongoDB ${console.log(error)}`)
+            throw new Error(`Error en conexion a mongoDB ${error}`)
         }
     }
 

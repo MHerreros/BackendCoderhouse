@@ -17,6 +17,9 @@ const authorizationLevel = 0
 // Flash
 const flash = require('connect-flash')
 
+// Logger
+const { errorLogger, warningLogger } = require('../utils/log4jsConfig')
+
 // Users Management
 const { createHash, isValidPassword } = require('../utils/bycrypt')
 const passport = require('passport')
@@ -44,7 +47,10 @@ passport.serializeUser((user, done) => {
 passport.deserializeUser((id, done) => {
     return storage.getById(id)
     .then(user => done(null, user))
-    .catch(error => done(error))
+    .catch(error => {
+        errorLogger.error(error)
+        done(error)
+    })
 })
 
 // Signup Strategy
@@ -66,6 +72,7 @@ passport.use(
                 done(null, user)
             })
             .catch(err => {
+                errorLogger.error(err)
                 done(err)
             })
         }
@@ -89,7 +96,10 @@ passport.use(
 
             return done(null, user)
         })
-        .catch(err => done(err))
+        .catch(err => {
+            errorLogger.error(err)
+            done(err)
+        })
     })
 )
 
@@ -114,6 +124,11 @@ userRouter.post('/login',
     }), (req, res) => { res.status(202).json({ message: 'Sesion iniciada con exito' }) }
 )
 
+userRouter.get('/login', (req, res) => {
+    warningLogger.warn(`Ruta /login en construccion`)
+    return res.status(200).json({message: `Aca se debe cargar la pantalla de login`})
+})
+
 // Logout usuario
 userRouter.post('/logout', (req, res) => {
     req.session.destroy(err =>  {
@@ -124,12 +139,13 @@ userRouter.post('/logout', (req, res) => {
 
 // Informacion usuario
 userRouter.get('/info', validateSession, async (req, res) => {
-    // if(req.session.passport){
-        console.log(req.session)
+    try{
         const user = await storage.getById(mongoose.Types.ObjectId(req.session.passport.user))
         return res.status(200).json({url: req.originalUrl, method: req.method, status: 200, error: null, message: {user}})
-    // }
-    // return res.status(404).json({url: req.originalUrl, method: req.method, status: 404, error: 'not found', message: `Sesion NO iniciada`})
+    } catch (error) {
+        errorLogger.error(error)
+        return res.status(500).json(error.message)
+    }
 })
 
 module.exports = userRouter

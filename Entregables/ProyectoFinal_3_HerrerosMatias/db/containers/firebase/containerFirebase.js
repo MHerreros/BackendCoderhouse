@@ -9,12 +9,12 @@ admin.initializeApp({
   databaseURL: 'https://entrega2-proyectofinal.firebaseio.com'
 });
 
-console.log("base de datos conectada")
 
 // export default query
 
 module.exports = class ContenedorFirebase {
   constructor(collection) {
+    console.log("Conectado a DB: Firebase")
     this.db = admin.firestore()
     this.query = this.db.collection(collection)
   }

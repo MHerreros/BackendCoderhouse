@@ -3,6 +3,8 @@ const {Router} = express
 const getStorage = require('../db/daos')
 const productsRouter = Router()
 
+const { errorLogger } = require('../utils/log4jsConfig')
+
 const validateSession = require('../utils/sessionValidator')
 
 const authorizationLevel = 0
@@ -19,6 +21,7 @@ productsRouter.get('/:id?', validateSession, async (req, res) => {
                 const data3 = await storage.getById((req.params.id))
                 return res.status(200).json(data3)
             } catch (error) {
+                errorLogger.error(error)
                 return res.status(500).json(error.message)
             }
         }
@@ -26,6 +29,7 @@ productsRouter.get('/:id?', validateSession, async (req, res) => {
             const data3 = await storage.getAll(null)
             return res.status(200).json(data3)
         } catch (error) {
+            errorLogger.error(error)
             return res.status(500).json(error.message)
         }
     } else {
@@ -40,6 +44,7 @@ productsRouter.post('', validateSession, async (req, res) => {
             const answer = await storage.save(req.body)
             return res.status(201).json(answer)
         } catch (error) {
+            errorLogger.error(error)
             return res.status(500).json(error.message)
         }
     } else {
@@ -55,6 +60,7 @@ productsRouter.put('/:id', validateSession, async (req, res) => {
             const answer = await storage.modifyById((req.params.id), req.body)
             return res.status(201).json(answer)
         } catch(error) {
+            errorLogger.error(error)
             return res.status(500).json(error.message)
         } 
     } else {
@@ -69,6 +75,7 @@ productsRouter.delete('/:id', validateSession, async (req, res) => {
             const answer = await storage.deleteById((req.params.id), null)
             return res.status(201).json(answer)
         } catch(error) {
+            errorLogger.error(error)
             return res.status(500).json(error.message)
         } 
     } else {

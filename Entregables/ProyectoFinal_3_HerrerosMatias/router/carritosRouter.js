@@ -3,6 +3,9 @@ const {Router} = express
 const getStorage = require('../db/daos')
 const carritoRouter = Router()
 
+const { errorLogger } = require('../utils/log4jsConfig')
+
+
 const authorizationLevel = 0
 
 const { carts: storage } = getStorage()
@@ -18,6 +21,7 @@ carritoRouter.get('', validateSession, async (req, res) => {
             const data3 = await storage.getCartByUserId((req.session.passport.user))
             return res.status(200).json(data3)
         } catch (error) {
+            errorLogger.error(error)
             return res.status(500).json(error.message)
         }
     } else {
@@ -33,6 +37,7 @@ carritoRouter.post('', validateSession, async (req, res) => {
             const answer = await storage.save(req.body)
             return res.status(201).json(answer)
         } catch (error) {
+            errorLogger.error(error)
             return res.status(500).json(error.message)
         }
     } else {
@@ -47,6 +52,7 @@ carritoRouter.delete('/:id', validateSession, async (req, res) => {
             const answer = await storage.deleteById((req.params.id), null)
             return res.status(201).json(answer)
         } catch(error) {
+            errorLogger.error(error)
             return res.status(500).json(error.message)
         } 
     } else {
@@ -66,6 +72,7 @@ carritoRouter.get('/:id/productos', validateSession, async (req, res) => {
             // console.log(data3)
             return res.status(200).json(data3)
         } catch (error) {
+            errorLogger.error(error)
             return res.status(500).json(error.message)
         }
     } else {
@@ -81,6 +88,7 @@ carritoRouter.post('/:id/productos', validateSession, async (req, res) => {
             const answer = await storage.modifyById((req.params.id), req.body)
             return res.status(201).json(answer)
         } catch(error) {
+            errorLogger.error(error)
             return res.status(500).json(error.message)
         } 
     } else {
@@ -95,6 +103,7 @@ carritoRouter.delete('/:id/productos/:id_prod', validateSession, async (req, res
             const answer = await storage.deleteById((req.params.id), (req.params.id_prod))
             return res.status(201).json(answer)
         } catch(error) {
+            errorLogger.error(error)
             return res.status(500).json(error.message)
         } 
     } else {
