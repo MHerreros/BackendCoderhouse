@@ -2,7 +2,7 @@ const { createTransport } = require('nodemailer')
 const dotenv = require('dotenv')
 dotenv.config()
 
-const TEST_MAIL = 'matiasherreros97@gmail.com'
+const TEST_MAIL = process.env.GMAIL_ACCOUNT
 const TEST_PASSWORD = process.env.GMAIL_PASSWORD
 
 const transporter = createTransport({
