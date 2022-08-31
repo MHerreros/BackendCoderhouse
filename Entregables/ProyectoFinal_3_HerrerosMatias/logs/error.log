@@ -1,0 +1,65 @@
+[2022-08-28T20:44:52.989] [ERROR] error - error
+[2022-08-28T20:47:19.683] [ERROR] error - error
+[2022-08-28T20:47:36.991] [ERROR] error - error
+[2022-08-28T20:50:50.362] [ERROR] error - error
+[2022-08-28T20:53:03.139] [ERROR] error - error
+[2022-08-28T20:55:31.526] [ERROR] error - error
+[2022-08-28T21:10:57.310] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. Cast to ObjectId failed for value "630bf057e1c564cffb3ef4b" (type string) at path "_id" for model "producto"
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\productosRouter.js:21:31
+[2022-08-28T21:11:20.098] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 630bf057e1c564cffb3ef4bf
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\productosRouter.js:21:31
+[2022-08-31T18:54:34.141] [ERROR] error - Error: Error: No existe el ID 62c82ae760a2da425bacc171
+    at CarritosDAOMongoDB.getAll (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:67:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:72:27
+[2022-08-31T19:08:58.629] [ERROR] error - ReferenceError: answer is not defined
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:127:41
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:10:24.409] [ERROR] error - ReferenceError: answer is not defined
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:127:41
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:11:15.073] [ERROR] error - ReferenceError: answer is not defined
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:127:41
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:25:55.714] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 630fdff3db5941d56e39ada3
+    at UsuariosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:131:30
+[2022-08-31T19:30:45.062] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 630fe115e758b1ca2bec1961
+    at UsuariosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:132:30
+[2022-08-31T19:32:02.147] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 630fe1621b7dc8f7cdb3cdb5
+    at UsuariosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:132:30
+[2022-08-31T19:32:54.234] [ERROR] error - ReferenceError: answer is not defined
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:138:41
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:38:58.081] [ERROR] error - TypeError: notifyPurchase is not a function
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:137:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:47:14.833] [ERROR] error - ReferenceError: products is not defined
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:137:38
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:48:27.566] [ERROR] error - TypeError: console.log(...) is not a function
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:139:17
+    at Array.map (<anonymous>)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:137:53
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:52:03.940] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'forEach')
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:138:59
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:54:13.997] [ERROR] error - TypeError: Assignment to constant variable.
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:132:30
+    at Array.forEach (<anonymous>)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:131:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:54:29.918] [ERROR] error - TypeError: products.map is not a function
+    at notifyPurchase (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\utils\ethereal.js:26:28)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:146:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
