@@ -126,7 +126,7 @@ carritoRouter.post('/buy', validateSession, async (req, res) => {
             // MODIFICAR CARRITO UNA VEZ REALIZADA LA COMPRA (STATUS CARRITO OPEN, DELETED, BOUGHT). ARMAR NUEVA FUNCION EN DAO CARRITO QUE MODIFIQUE EL STATUS.
             let cartProducts = ''
             cart.productos.forEach(element => {
-                cartProducts = cartProducts + (`<li>Producto: ${element.nombre}, a un precio de ${element.precio}.</li>`)
+                cartProducts = cartProducts + (`<li>Producto: ${element.nombre}, a un precio de $${element.precio}.</li>`)
             })
 
             const cartUser = await users.getById(mongoose.Types.ObjectId(cart.user))

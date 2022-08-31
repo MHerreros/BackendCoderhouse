@@ -31,7 +31,14 @@ const notifyPurchase = async (products, customer, admin) => {
         from: `E-Commerce | [NUEVO PEDIDO]`,
         to: admin.username,
         subject: `E-Commerce | Nueva Venta`,
-        html: `<h1> Hola ${admin.nombre}! </h1> </br> <p>${customer.nombre} ha realizado la siguiente compra: </p> </br> ${products}`
+        html: 
+            `<h1> Hola ${admin.nombre}! </h1>
+            </br> 
+            <p>${customer.nombre} ha realizado la siguiente compra: </p> 
+            </br> 
+            <ol>
+                ${products}
+            </ol>`
     }
 
     try{
