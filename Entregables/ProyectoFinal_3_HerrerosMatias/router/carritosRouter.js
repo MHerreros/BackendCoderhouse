@@ -1,16 +1,21 @@
 const express = require('express')
-const {Router} = express
+const { Router } = express
 const getStorage = require('../db/daos')
+const mongoose = require('mongoose')
+
 const carritoRouter = Router()
 
 const { errorLogger } = require('../utils/log4jsConfig')
 
-
 const authorizationLevel = 0
 
 const { carts: storage } = getStorage()
+const { users } = getStorage()
 
 const validateSession = require('../utils/sessionValidator')
+const notifyPurchase = require('../utils/ethereal')
+
+const adminUser = {nombre:'Ximena', username: 'matias.herreros@ing.austral.edu.ar'}
 
 // RUTAS CARRITO
 
@@ -33,6 +38,7 @@ carritoRouter.get('', validateSession, async (req, res) => {
 carritoRouter.post('', validateSession, async (req, res) => {
     if((authorizationLevel == 0 || authorizationLevel == 1) && req.session.passport.user){
         req.body.user = req.session.passport.user
+        req.body.status = "open"
         try{
             const answer = await storage.save(req.body)
             return res.status(201).json(answer)
@@ -102,6 +108,32 @@ carritoRouter.delete('/:id/productos/:id_prod', validateSession, async (req, res
         try {
             const answer = await storage.deleteById((req.params.id), (req.params.id_prod))
             return res.status(201).json(answer)
+        } catch(error) {
+            errorLogger.error(error)
+            return res.status(500).json(error.message)
+        } 
+    } else {
+        return res.status(401).json({url: req.originalUrl, method: req.method, status: 401, error: 'Unauthorized', message:`Ruta '${req.originalUrl}', metodo '${req.method}' no autorizada para el usuario.`})
+    }
+})
+
+// Terminar la compra
+carritoRouter.post('/buy', validateSession, async (req, res) => {
+    if(authorizationLevel == 0 || authorizationLevel == 1){
+        try {
+            const cart = await storage.getById(req.body.cartId)
+
+            // MODIFICAR CARRITO UNA VEZ REALIZADA LA COMPRA (STATUS CARRITO OPEN, DELETED, BOUGHT). ARMAR NUEVA FUNCION EN DAO CARRITO QUE MODIFIQUE EL STATUS.
+            let cartProducts = ''
+            cart.productos.forEach(element => {
+                cartProducts = cartProducts + (`<li>Producto: ${element.nombre}, a un precio de ${element.precio}.</li>`)
+            })
+
+            const cartUser = await users.getById(mongoose.Types.ObjectId(cart.user))
+
+            await notifyPurchase(cartProducts, {username: cartUser.username, nombre: cartUser.nombre}, adminUser )
+            return res.status(201).json('ok')
+
         } catch(error) {
             errorLogger.error(error)
             return res.status(500).json(error.message)
