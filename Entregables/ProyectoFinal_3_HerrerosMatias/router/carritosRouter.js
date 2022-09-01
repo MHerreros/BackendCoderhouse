@@ -14,6 +14,7 @@ const { users } = getStorage()
 
 const validateSession = require('../utils/sessionValidator')
 const { notifyPurchase } = require('../utils/ethereal')
+const sendWhatsApp = require('../utils/twilio')
 
 const adminUser = {nombre:'Ximena', username: 'matias.herreros@ing.austral.edu.ar'}
 
@@ -132,6 +133,7 @@ carritoRouter.post('/buy', validateSession, async (req, res) => {
             const cartUser = await users.getById(mongoose.Types.ObjectId(cart.user))
 
             await notifyPurchase(cartProducts, {username: cartUser.username, nombre: cartUser.nombre}, adminUser )
+            await sendWhatsApp({username: cartUser.username, nombre: cartUser.nombre, apellido: cartUser.apellido})
             return res.status(201).json('ok')
 
         } catch(error) {
