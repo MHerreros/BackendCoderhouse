@@ -7,232 +7,404 @@
 	},
 	"item": [
 		{
-			"name": "Product PUT",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"nombre\":\"Connno\", \"descripcion\":\"cono de plastico\", \"codigo\":22222, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 25, \"stock\": 22}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Products",
+			"item": [
+				{
+					"name": "Product PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\":\"mate\", \"descripcion\":\"cono de plastico\", \"codigo\":22222, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 25, \"stock\": 22}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/62c82ac360a2da425bacc16f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"62c82ac360a2da425bacc16f"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/api/productos/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"productos",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Product POST",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"nombre\":\"Cono\", \"descripcion\":\"cono de plastico\", \"codigo\":22222, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 255, \"stock\": 31}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Product POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\":\"Polenta\", \"descripcion\":\"cono de plastico\", \"codigo\":22222, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 255, \"stock\": 31}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								""
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/api/productos/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"productos",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Product GET",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/productos/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"productos",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Products DELETE",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/productos/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"productos",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Carrito POST",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"productos\":\r\n    [\r\n        {\"nombre\":\"CAFE\",\"descripcion\":\"cono de plastico\",\"codigo\":22222,\"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\",\"precio\":255,\"stock\":31,\"id\":4,\"timestamp\":1654402146644}\r\n    ]\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Product GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/630bf057e1c564cffb3ef4bb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"630bf057e1c564cffb3ef4bb"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/api/carrito",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"carrito"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Carrito DELETE",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/carrito/3",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"carrito",
-						"3"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Carrito GET",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/carrito/1/productos",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"carrito",
-						"1",
-						"productos"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Carrito POST Producto",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "    {\"nombre\":\"cafeeee\",\"descripcion\":\"cono de plastico\",\"codigo\":22222,\"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\",\"precio\":25,\"stock\":22,\"id\":3,\"timestamp\":1654401227090}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Products DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/62c82ac360a2da425bacc16f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"62c82ac360a2da425bacc16f"
+							]
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/carrito/1/productos",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"carrito",
-						"1",
-						"productos"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Carrito DELETE Producto",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/carrito/2/productos/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"carrito",
-						"2",
-						"productos",
-						"2"
-					]
+			"name": "Carts",
+			"item": [
+				{
+					"name": "Carrito POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"productos\":\r\n    [\r\n        {\"nombre\":\"azucar\",\"descripcion\":\"cono de plastico\",\"codigo\":22222,\"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\",\"precio\":255,\"stock\":31,\"id\":4,\"timestamp\":1654402146644}\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/62c82afc60a2da425bacc173",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"62c82afc60a2da425bacc173"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/62c82ae760a2da425bacc171/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"62c82ae760a2da425bacc171",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito POST Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\"nombre\":\"Celular\",\"descripcion\":\"cono de plastico\",\"codigo\":22222,\"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\",\"precio\":25,\"stock\":22,\"id\":88,\"timestamp\":1654401227090}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/630bc7d1e48bdef8b1623b80/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"630bc7d1e48bdef8b1623b80",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito DELETE Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/62c82ae760a2da425bacc171/productos/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"62c82ae760a2da425bacc171",
+								"productos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito GET by User ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito POST (comprar)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cartId\": \"630bc7d1e48bdef8b1623b80\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/buy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"buy"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User POST (create)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Carlos\",\r\n    \"apellido\": \"Herreros\",\r\n    \"username\": \"carlos@email.com\",\r\n    \"password\": \"Graciela1234\",\r\n    \"edad\": 50,\r\n    \"direccion\": \"Avenida Siempre Viva 444\",\r\n    \"telefono\": 541165948792,\r\n    \"foto\": \"static/user-profiles/avatar1.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User POST (login)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"juan@email.com\",\r\n    \"password\": \"Matias1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User POST (logout)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"graciela@email.com\",\r\n    \"password\": \"Graciela1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User GET (info)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

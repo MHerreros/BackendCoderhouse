@@ -63,3 +63,9 @@
     at notifyPurchase (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\utils\ethereal.js:26:28)
     at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:146:19
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T20:56:55.968] [ERROR] error - Error: El usuario graciela@email.com ya existe
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:70:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T21:00:06.766] [ERROR] error - Error: El usuario carlos@email.com ya existe
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:70:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

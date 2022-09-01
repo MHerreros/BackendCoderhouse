@@ -13,7 +13,7 @@ const { carts: storage } = getStorage()
 const { users } = getStorage()
 
 const validateSession = require('../utils/sessionValidator')
-const notifyPurchase = require('../utils/ethereal')
+const { notifyPurchase } = require('../utils/ethereal')
 
 const adminUser = {nombre:'Ximena', username: 'matias.herreros@ing.austral.edu.ar'}
 
