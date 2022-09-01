@@ -2,6 +2,8 @@ const express = require('express')
 const { Router } = express
 const getStorage = require('../db/daos')
 const mongoose = require('mongoose')
+const dotenv = require('dotenv')
+dotenv.config()
 
 const carritoRouter = Router()
 
@@ -14,8 +16,9 @@ const { users } = getStorage()
 
 const validateSession = require('../utils/sessionValidator')
 const { notifyPurchase } = require('../utils/ethereal')
+const sendWhatsApp = require('../utils/twilio')
 
-const adminUser = {nombre:'Ximena', username: 'matias.herreros@ing.austral.edu.ar'}
+const adminUser = {nombre:process.env.ADMIN_NOMBRE, username: process.env.ADMIN_EMAIL, telefono:process.env.ADMIN_TELEFONO}
 
 // RUTAS CARRITO
 
@@ -132,6 +135,7 @@ carritoRouter.post('/buy', validateSession, async (req, res) => {
             const cartUser = await users.getById(mongoose.Types.ObjectId(cart.user))
 
             await notifyPurchase(cartProducts, {username: cartUser.username, nombre: cartUser.nombre}, adminUser )
+            await sendWhatsApp({username: cartUser.username, nombre: cartUser.nombre, apellido: cartUser.apellido}, adminUser)
             return res.status(201).json('ok')
 
         } catch(error) {
