@@ -8,12 +8,12 @@ const PHONE_NUMBER_WHATSAPP = 'whatsapp:+14155238886'
 
 const client = twilio(ACCOUNT_SID, AUTH_TOKEN)
 
-const sendWhatsApp = async (user) => {
+const sendWhatsApp = async (user, admin) => {
     try{
         await client.messages.create({
-            body: `Hola Admin! Tienes un nuevo pedido de ${user.nombre} ${user.apellido}. Podes contactarlo al siguiente mail: ${user.username}`,
+            body: `Hola ${admin.nombre}! Tienes un nuevo pedido de ${user.nombre} ${user.apellido}. Podes contactarlo al siguiente mail: ${user.username}`,
             from: PHONE_NUMBER_WHATSAPP,
-            to: 'whatsapp:+5493489565353'
+            to: `whatsapp:${admin.telefono}`
         })
     } catch (error) {
         console.log(error)
