@@ -3,6 +3,10 @@
 const express = require('express')
 const app = express()
 
+// Emailing
+const { notifyNewUser } = require('../utils/ethereal')
+const adminUser = {nombre:'Ximena', username: 'matias.herreros@ing.austral.edu.ar'}
+
 // Router
 const { Router } = express
 const userRouter = Router()
@@ -108,12 +112,17 @@ passport.use(
 // Crea nuevo usuario
 userRouter.post('/create', 
     passport.authenticate('signup', {
-        successRedirect: '/users/login',
+        // successRedirect: '/users/login',
         failureRedirect: '/users/create',
         failureFlash: true
   }),
-    (req, res) => { res.status(201).json({ message: 'Usuario agregado con exito' })
-})
+    (req, res) => { 
+        console.log(req.body)
+        notifyNewUser(req.body, adminUser)
+        // res.status(201).json({ message: 'Usuario agregado con exito' })
+        res.redirect('/users/login')
+    }
+)
 
 // Login usuario
 userRouter.post('/login',     
