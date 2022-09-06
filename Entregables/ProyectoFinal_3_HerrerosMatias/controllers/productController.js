@@ -1,13 +1,16 @@
 const authorizationLevel = 0
-const getStorage = require('../db/daos')
-const { products: storage } = getStorage()
 const { errorLogger } = require('../utils/log4jsConfig')
+
+const { getItemById, getAllItems, addItem, editItem, deleteItem } = require('../services/productServices')
 
 const getProductById = async (req, res) => {
     if(authorizationLevel == 0 || authorizationLevel == 1){
-        if(req.params.id){
+
+        const productId = req.params.id
+
+        if(productId){
             try{
-                const data3 = await storage.getById((req.params.id))
+                const data3 = await getItemById(productId)
                 return res.status(200).json(data3)
             } catch (error) {
                 errorLogger.error(error)
@@ -15,7 +18,7 @@ const getProductById = async (req, res) => {
             }
         }
         try{
-            const data3 = await storage.getAll(null)
+            const data3 = await getAllItems()
             return res.status(200).json(data3)
         } catch (error) {
             errorLogger.error(error)
@@ -28,8 +31,11 @@ const getProductById = async (req, res) => {
 
 const addProduct = async (req, res) => {
     if(authorizationLevel == 0){
+
+        const newProduct = req.body
+
         try{
-            const answer = await storage.save(req.body)
+            const answer = await addItem(newProduct)
             return res.status(201).json(answer)
         } catch (error) {
             errorLogger.error(error)
@@ -42,9 +48,13 @@ const addProduct = async (req, res) => {
 
 const editProduct = async (req, res) => {
     if(authorizationLevel == 0){
+
+        const productId = req.params.id
+        const newProduct = req.body
+
         try {
             // NOTA: data debe ser un objeto JSON con los atributos: nombre, descripcion, codigo, precio, stock, imagen.
-            const answer = await storage.modifyById((req.params.id), req.body)
+            const answer = editItem(productId, newProduct)
             return res.status(201).json(answer)
         } catch(error) {
             errorLogger.error(error)
@@ -57,8 +67,11 @@ const editProduct = async (req, res) => {
 
 const deleteProduct = async (req, res) => {
     if(authorizationLevel == 0){
+
+        const productId = req.params.id
+
         try {
-            const answer = await storage.deleteById((req.params.id), null)
+            const answer = await deleteItem(productId, null)
             return res.status(201).json(answer)
         } catch(error) {
             errorLogger.error(error)
