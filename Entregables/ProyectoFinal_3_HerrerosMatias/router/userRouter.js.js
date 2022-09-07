@@ -5,7 +5,7 @@ const app = express()
 
 // Emailing
 const { notifyNewUser } = require('../utils/ethereal')
-const adminUser = {nombre:'Ximena', username: 'matias.herreros@ing.austral.edu.ar'}
+const adminUser = {nombre:process.env.ADMIN_NOMBRE, username: process.env.ADMIN_EMAIL, telefono:process.env.ADMIN_TELEFONO}
 
 // Router
 const { Router } = express

@@ -72,3 +72,30 @@
 [2022-08-31T23:24:42.517] [ERROR] error - Error: No se encontro el usuario "juan@email.com"
     at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-05T23:14:10.439] [ERROR] error - TypeError: editItem is not a function
+    at editProduct (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:57:28)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:365:14)
+[2022-09-05T23:14:49.531] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 6316a4d831dd355907fe1ecd
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:13:31)
+[2022-09-06T22:50:57.240] [ERROR] error - Error: No existe el ID
+    at CarritosDAOMongoDB.modifyById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:94:23)
+    at addProductToCart (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\cartController.js:85:42)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
