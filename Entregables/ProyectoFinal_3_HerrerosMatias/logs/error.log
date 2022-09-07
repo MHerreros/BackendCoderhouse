@@ -99,3 +99,6 @@
     at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
     at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
     at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+[2022-09-06T23:53:09.659] [ERROR] error - ReferenceError: cartProducts is not defined
+    at finishPurchase (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\cartController.js:124:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

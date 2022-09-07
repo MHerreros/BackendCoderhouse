@@ -119,7 +119,7 @@ const finishPurchase = async (req, res) => {
         const cartId = req.body.cartId
 
         try {
-            const cartUser = await getItemById(cartId)
+            const { cartProducts, cartUser } = await getItemById(cartId)
 
             await notifyPurchase(cartProducts, {username: cartUser.username, nombre: cartUser.nombre}, adminUser )
             await sendWhatsApp({username: cartUser.username, nombre: cartUser.nombre, apellido: cartUser.apellido}, adminUser)

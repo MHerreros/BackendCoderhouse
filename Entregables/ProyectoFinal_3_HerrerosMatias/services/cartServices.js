@@ -33,9 +33,8 @@ const getItemById = async(itemId) => {
         cartProducts = cartProducts + (`<li>Producto: ${element.nombre}, a un precio de $${element.precio}.</li>`)
     })
 
-    return await users.getById(mongoose.Types.ObjectId(cart.user))
+    const cartUser = await users.getById(mongoose.Types.ObjectId(cart.user))
+    return { cartProducts, cartUser }
 }
-
-
 
 module.exports = { getItemByUserId, addItem, deleteItem, getAllItems, editItem, getItemById }
