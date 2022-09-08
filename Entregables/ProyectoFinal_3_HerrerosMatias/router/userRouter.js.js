@@ -3,32 +3,26 @@
 const express = require('express')
 const app = express()
 
-// Emailing
-const { notifyNewUser } = require('../utils/ethereal')
-const adminUser = {nombre:'Ximena', username: 'matias.herreros@ing.austral.edu.ar'}
-
 // Router
 const { Router } = express
 const userRouter = Router()
+
+const { addUser, userLogin, loginView, userLogout, userInfo } = require('../controllers/userController')
 
 // Storage
 const getStorage = require('../db/daos')
 const { users: storage } = getStorage()
 
-// Auhtorization
-const authorizationLevel = 0
-
 // Flash
 const flash = require('connect-flash')
 
 // Logger
-const { errorLogger, warningLogger } = require('../utils/log4jsConfig')
+const { errorLogger } = require('../utils/log4jsConfig')
 
 // Users Management
 const { createHash, isValidPassword } = require('../utils/bycrypt')
 const passport = require('passport')
 const { Strategy: LocalStrategy } = require('passport-local')
-const mongoose = require('mongoose')
 const validateSession = require('../utils/sessionValidator')
 
 // ==== EXPRESS MIDLEWARES ====
@@ -115,13 +109,8 @@ userRouter.post('/create',
         // successRedirect: '/users/login',
         failureRedirect: '/users/create',
         failureFlash: true
-  }),
-    (req, res) => { 
-        console.log(req.body)
-        notifyNewUser(req.body, adminUser)
-        // res.status(201).json({ message: 'Usuario agregado con exito' })
-        res.redirect('/users/login')
-    }
+    }),
+    addUser
 )
 
 // Login usuario
@@ -130,31 +119,17 @@ userRouter.post('/login',
         successRedirect: '/home',
         failureRedirect: '/login',
         failureFlash: true
-    }), (req, res) => { res.status(202).json({ message: 'Sesion iniciada con exito' }) }
+    }), 
+    userLogin
 )
 
-userRouter.get('/login', (req, res) => {
-    warningLogger.warn(`Ruta /login en construccion`)
-    return res.status(200).json({message: `Aca se debe cargar la pantalla de login`})
-})
+// Login view
+userRouter.get('/login', loginView)
 
 // Logout usuario
-userRouter.post('/logout', (req, res) => {
-    req.session.destroy(err =>  {
-        if(err){ return next(err) }
-        res.status(100).redirect('/users/login')
-    })
-})
+userRouter.post('/logout', userLogout)
 
 // Informacion usuario
-userRouter.get('/info', validateSession, async (req, res) => {
-    try{
-        const user = await storage.getById(mongoose.Types.ObjectId(req.session.passport.user))
-        return res.status(200).json({url: req.originalUrl, method: req.method, status: 200, error: null, message: {user}})
-    } catch (error) {
-        errorLogger.error(error)
-        return res.status(500).json(error.message)
-    }
-})
+userRouter.get('/info', validateSession, userInfo)
 
 module.exports = userRouter
