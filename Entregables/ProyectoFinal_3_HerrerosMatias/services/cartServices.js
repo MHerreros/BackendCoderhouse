@@ -9,6 +9,7 @@ const getItemByUserId = async () => {
 }
 
 const addItem = async(newItem) => {
+    newItem.timestamp = Date.now()
     return await storage.save(newItem)
 }
 

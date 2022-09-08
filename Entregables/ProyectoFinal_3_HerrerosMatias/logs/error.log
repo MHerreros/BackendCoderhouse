@@ -116,3 +116,14 @@
 [2022-09-07T21:29:21.829] [ERROR] error - Error: El usuario carlos@email.com ya existe
     at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:65:27
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-07T22:08:47.622] [ERROR] error - Error: No existe el ID
+    at CarritosDAOMongoDB.modifyById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\carritos\CarritosDAOMongoDB.js:28:15)
+    at editItem (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\cartServices.js:25:26)
+    at addProductToCart (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\cartController.js:87:34)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)

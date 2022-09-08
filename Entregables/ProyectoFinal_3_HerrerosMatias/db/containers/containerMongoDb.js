@@ -26,7 +26,6 @@ class containerMongoDB {
 
     async save(nuevoObjeto){
         try{
-            nuevoObjeto.timestamp = Date.now()
             const item = await this.collection.create(nuevoObjeto)
             return item
         } catch (error){
@@ -65,36 +64,6 @@ class containerMongoDB {
 
         }catch(e){
             throw new Error(e)
-        }
-    }
-
-    async modifyById(id, newData){
-        if(this.collection.modelName == 'producto'){
-            try{
-                await this.collection.findOneAndUpdate({_id: mongoose.Types.ObjectId(id)}, {
-                    nombre: newData.nombre,
-                    descripcion: newData.descripcion,
-                    codigo: newData.codigo,
-                    foto: newData.foto,
-                    precio: newData.precio,
-                    stock: newData.stock,
-                    timestamp: Date.now()
-                })
-                return {message:`Se ha modificado el objeto con id ${id}`}
-            } catch (error){
-                throw new Error('No existe el ID de producto')
-            }
-        } else if (this.collection.modelName == 'carrito'){
-            try{
-                await this.collection.updateOne({_id: mongoose.Types.ObjectId(id)}, {
-                     $push:{productos:newData}
-                })
-                return {message:`Se ha modificado el objeto con id ${id}`}
-            } catch (error){
-                throw new Error('No existe el ID')
-            }
-        } else {
-            throw new Error('No existe la BDD')
         }
     }
    
