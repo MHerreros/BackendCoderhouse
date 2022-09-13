@@ -1,6 +1,8 @@
 const ContenedorMongoDB = require('../../containers/containerMongoDb')
 const mongoose = require('mongoose')
 const { dbLogger } = require('../../../utils/log4jsConfig')
+const { normalizeCartData } = require('../../DTOs/cartDTO')
+
 class CarritosDAOMongoDB extends ContenedorMongoDB {
   constructor(collectionName, schema, uri) {
     super(collectionName, schema, uri)
@@ -11,7 +13,7 @@ class CarritosDAOMongoDB extends ContenedorMongoDB {
         const items = await this.collection.find({user: id})
 
         if(items){
-            return items
+            return normalizeCartData(items)
         }
         throw new Error(`No existe el ID ${id}`)
 
@@ -19,6 +21,7 @@ class CarritosDAOMongoDB extends ContenedorMongoDB {
         throw new Error(`Error en lectura de arvhivo en funcion getById. ${error.message}`)
     }
   }
+  
   async modifyById(id, newData){
     try{
         await this.collection.updateOne({_id: mongoose.Types.ObjectId(id)}, {
