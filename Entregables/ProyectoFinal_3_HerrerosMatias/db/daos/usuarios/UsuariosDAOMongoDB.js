@@ -1,8 +1,17 @@
 const ContenedorMongoDB = require('../../containers/containerMongoDb')
 const { normalizeUserData } = require('../../DTOs/userDTO')
+let usuariosDAOMongoDBInstance = null
+
 class UsuariosDAOMongoDB extends ContenedorMongoDB {
   constructor(collectionName, schema, uri) {
     super(collectionName, schema, uri)
+  }
+
+  static getInstance(collectionName, schema, uri) {
+    if(!usuariosDAOMongoDBInstance) {
+      usuariosDAOMongoDBInstance = new UsuariosDAOMongoDB(collectionName, schema, uri)
+    }
+    return usuariosDAOMongoDBInstance
   }
 
   async findUser(username){

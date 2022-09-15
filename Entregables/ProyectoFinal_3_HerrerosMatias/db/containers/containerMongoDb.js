@@ -1,8 +1,8 @@
 const { ClientSession } = require('mongodb')
 const mongoose = require('mongoose')
+const { checkConnection } = require('../connectionMongoDB')
 
 const { dbLogger } = require('../../utils/log4jsConfig')
-
 class containerMongoDB {
 
     constructor(collectionName, schema, uri) {
@@ -12,16 +12,7 @@ class containerMongoDB {
     }
 
     async mongoConnect() {
-        try {
-            await mongoose.connect(this.uri, {
-                useNewUrlParser: true,
-                useUnifiedTopology: true
-            })
-            dbLogger.info("Conectado a DB: Mongo")
-        }
-        catch (error) {
-            throw new Error(`Error en conexion a mongoDB ${error}`)
-        }
+        checkConnection(this.uri)
     }
 
     async save(nuevoObjeto){

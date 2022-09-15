@@ -24,7 +24,9 @@ const CarritosDAOFirebase = require('./carritos/CarritosDAOFirebase')
 // Instancia de los Contenedores de Usuarios para distintos archivos
 const UsuariosDAOMongoDB = require('./usuarios/UsuariosDAOMongoDB')
 
+// const singletonCarritos = require('./carritos/CarritosDAOMongoDB')
 
+// ==== FACTORY DAOS ====
 const getStorage = () => {
   const storage = process.env.STORAGE || 'archivo'
 
@@ -45,9 +47,9 @@ const getStorage = () => {
 
     case 'mongodb':
       return {
-        products: new ProductosDAOMongoDB('producto', schemaProducto, uri),
-        carts: new CarritosDAOMongoDB('carrito', schemaCarrito, uri),
-        users: new UsuariosDAOMongoDB('usuarios', schemaUsuario, uri)
+        products: ProductosDAOMongoDB.getInstance('producto', schemaProducto, uri),
+        carts: CarritosDAOMongoDB.getInstance('carrito', schemaCarrito, uri),
+        users: UsuariosDAOMongoDB.getInstance('usuarios', schemaUsuario, uri)
       }
       break
 

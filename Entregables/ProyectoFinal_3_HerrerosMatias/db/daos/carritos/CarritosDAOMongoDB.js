@@ -2,10 +2,18 @@ const ContenedorMongoDB = require('../../containers/containerMongoDb')
 const mongoose = require('mongoose')
 const { dbLogger } = require('../../../utils/log4jsConfig')
 const { normalizeCartData } = require('../../DTOs/cartDTO')
-
+let carritosDAOMongoDBInstance = null
 class CarritosDAOMongoDB extends ContenedorMongoDB {
   constructor(collectionName, schema, uri) {
     super(collectionName, schema, uri)
+  }
+
+  static getInstance(collectionName, schema, uri) {
+    if(!carritosDAOMongoDBInstance) {
+      carritosDAOMongoDBInstance = new CarritosDAOMongoDB(collectionName, schema, uri)
+    }
+
+    return carritosDAOMongoDBInstance
   }
 
   async getCartByUserId(id){
