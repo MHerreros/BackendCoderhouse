@@ -4,7 +4,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const PORT = process.env.PORT || 8080
-console.log(PORT)
+// console.log(PORT)
 
 const userOk = 
     {
@@ -29,15 +29,15 @@ const newUser = {
     foto: "static/user-profiles/avatar1.png"
 }
 
-const testLogin = (user) => {
-    axios.post(`http://localhost:${PORT}/users/login`, user)
+const testLogin = async (user) => {
+    let ans = null
+    await Promise.resolve(axios.post(`http://localhost:${PORT}/users/login`, user))
         .then((res) => {
-            console.log('SUCCESS')
-            return true
+            ans = res.data
         })
-        .catch((e) => {
-            console.error("FAILED: ", e.message)
-        })
+        .catch((e) => {return e.message})
+    // console.log(ans)
+    return ans
 }
 
 const testUserInfo = (user) => {
@@ -88,20 +88,27 @@ const testCreate = (user) => {
         })
 }
 
+// (async () => {
+//     let asd = await testLogin(userOk)
+//     console.log(asd)
 
-(async () => {
-    // test('login test', async () => expect(await testLogin(userOk)).toBe(true))
+// })()
 
-    // await testLogin(userOk)
-    // await testLogin(userNok)
+module.exports = { testLogin }
+// (async () => {
 
+
+    
+
+
+    // hola.then((e) => console.log('hola', e))
     // await testUserInfo(userOk)
     // await testUserInfo(userNok)
 
     // await testLogout(userOk)
     // await testLogout(userNok)
 
-    await testCreate(newUser)
+    // await testCreate(newUser)
 
 
-})()
+// })()
