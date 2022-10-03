@@ -5,4 +5,9 @@ const getItemById = async(itemId) => {
     return await storage.getById((itemId))
 }
 
-module.exports = { getItemById }
+const createItem = async(req, res) => {
+    req.timestamp = new Date()
+    return storage.save(req)
+}
+
+module.exports = { getItemById, createItem }

@@ -4,16 +4,19 @@ const adminUser = {nombre:process.env.ADMIN_NOMBRE, username: process.env.ADMIN_
 
 // Storage
 const mongoose = require('mongoose')
-const { getItemById } = require('../services/userServices')
+const { getItemById, createItem } = require('../services/userServices')
 
 // Logger
 const { errorLogger, warningLogger } = require('../utils/log4jsConfig')
 
 const addUser = async(req, res) => { 
     const newUser = req.body
-
     notifyNewUser(newUser, adminUser)
     res.redirect('/users/login')
+}
+
+const createUser = async(req, res) => {
+    return await createItem(req)
 }
 
 const userLogin = async(req, res) => { res.status(202).json({ message: 'Sesion iniciada con exito' })}
@@ -26,7 +29,8 @@ const loginView = async(req, res) => {
 const userLogout = async(req, res) => {
     req.session.destroy(err =>  {
         if(err){ return next(err) }
-        res.status(100).redirect('/users/login')
+        res.json({message:'Session destroyed'})
+        // res.status(100).redirect('/users/login')
     })
 }
 
@@ -39,4 +43,4 @@ const userInfo = async(req, res) => {
         return res.status(500).json(error.message)
     }
 }
-module.exports = { addUser, userLogin, loginView, userLogout, userInfo }
+module.exports = { addUser, userLogin, loginView, userLogout, userInfo, createUser }

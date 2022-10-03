@@ -16,9 +16,10 @@ class UsuariosDAOMongoDB extends ContenedorMongoDB {
 
   async findUser(username){
     try{
-        const user = await this.collection.findOne({ username: username.username })
-        // console.log(user)
+      const user = await this.collection.findOne({ username: username.username })
+      if(user){
         return normalizeUserData(user)
+      }
     } catch(error) {
         throw new Error(`Error en la busqueda del Usuario (findUser()). ${error.message}`)
     }
