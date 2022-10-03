@@ -7,7 +7,7 @@ const app = express()
 const { Router } = express
 const userRouter = Router()
 
-const { addUser, userLogin, loginView, userLogout, userInfo } = require('../controllers/userController')
+const { addUser, userLogin, loginView, userLogout, userInfo, createUser } = require('../controllers/userController')
 
 // Storage
 const getStorage = require('../db/daos')
@@ -64,7 +64,8 @@ passport.use(
                     throw new Error(`El usuario ${user.username} ya existe`)
                 }
                 req.body.password = createHash(password)
-                return storage.save(req.body)
+                return createUser(req.body)
+                // return storage.save(req.body)
             })
             .then(user => {
                 done(null, user)
@@ -88,13 +89,19 @@ passport.use(
                 throw new Error(`No se encontro el usuario "${username}"`)
             }
 
+            // console.log("(1)")
+
             if (!isValidPassword(user.password, password)) {
                 throw new Error('Contraseña incorrecta')
             }
 
+            // console.log("(2): ", user)
+
             return done(null, user)
         })
         .catch(err => {
+            // console.log("(3)")
+
             errorLogger.error(err)
             done(err)
         })
@@ -116,7 +123,7 @@ userRouter.post('/create',
 // Login usuario
 userRouter.post('/login',     
     passport.authenticate('login', {
-        successRedirect: '/home',
+        // successRedirect: '/home',
         failureRedirect: '/login',
         failureFlash: true
     }), 
