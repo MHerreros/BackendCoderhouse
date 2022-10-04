@@ -54,7 +54,7 @@ const editProduct = async (req, res) => {
 
         try {
             // NOTA: data debe ser un objeto JSON con los atributos: nombre, descripcion, codigo, precio, stock, imagen.
-            const answer = editItem(productId, newProduct)
+            const answer = await editItem(productId, newProduct)
             return res.status(201).json(answer)
         } catch(error) {
             errorLogger.error(error)

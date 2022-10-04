@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"nombre\":\"mate\", \"descripcion\":\"cono de plastico\", \"codigo\":22222, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 25, \"stock\": 22}",
+							"raw": "{\"nombre\":\"Gorro\", \"descripcion\":\"yerba mate La Merced\", \"codigo\":3333, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 25, \"stock\": 22}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,7 +24,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/productos/62c82ac360a2da425bacc16f",
+							"raw": "http://localhost:8080/api/productos/62c82aba60a2da425bacc16d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -33,7 +33,7 @@
 							"path": [
 								"api",
 								"productos",
-								"62c82ac360a2da425bacc16f"
+								"62c82aba60a2da425bacc16d"
 							]
 						}
 					},
@@ -46,7 +46,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"nombre\":\"Polenta\", \"descripcion\":\"cono de plastico\", \"codigo\":22222, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 255, \"stock\": 31}",
+							"raw": "{\"nombre\":\"Control\", \"descripcion\":\"tablets\", \"codigo\":22222, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 255, \"stock\": 31}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -75,7 +75,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/productos/630bf057e1c564cffb3ef4bb",
+							"raw": "http://localhost:8080/api/productos/62c82aba60a2da425bacc16d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -84,7 +84,7 @@
 							"path": [
 								"api",
 								"productos",
-								"630bf057e1c564cffb3ef4bb"
+								"62c82aba60a2da425bacc16d"
 							]
 						}
 					},
@@ -96,7 +96,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/productos/62c82ac360a2da425bacc16f",
+							"raw": "http://localhost:8080/api/productos/633b77490bd0e9bd81860c27",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -105,7 +105,119 @@
 							"path": [
 								"api",
 								"productos",
-								"62c82ac360a2da425bacc16f"
+								"633b77490bd0e9bd81860c27"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products GraphQL",
+			"item": [
+				{
+					"name": "Mutation ADD Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "\r\nmutation {\r\n    addProduct(data:{\r\n        nombre:\"Mouse Inalambrico\", \r\n        descripcion:\"tablets\", \r\n        codigo:22222, \r\n        foto:\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \r\n        precio: 255, \r\n        stock: 31\r\n    }) {\r\n        nombre\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mutation EDIT Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "\r\nmutation {\r\n    modifyProduct(\r\n        id:\"62c82aba60a2da425bacc16d\",\r\n        data:{\r\n            nombre:\"Terba MARCA 1\", \r\n            descripcion:\"tablets\", \r\n            codigo:22222, \r\n            foto:\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \r\n            precio: 255, \r\n            stock: 31\r\n        }\r\n    )\r\n    {\r\n        nombre,\r\n        _id\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mutation DELETE Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "\r\nmutation {\r\n    deleteProduct(\r\n        id:\"62c82aba60a2da425bacc16d\",\r\n    )\r\n    {\r\n        message\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query GET Product/s",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n    getAllProducts {\r\n        nombre\r\n    }\r\n    getProductById(id: \"62c82aba60a2da425bacc16d\") {\r\n        nombre\r\n    }\r\n    \r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"graphql"
 							]
 						}
 					},
@@ -123,7 +235,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"productos\":\r\n    [\r\n        {\"nombre\":\"azucar\",\"descripcion\":\"cono de plastico\",\"codigo\":22222,\"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\",\"precio\":255,\"stock\":31,\"id\":4,\"timestamp\":1654402146644}\r\n    ]\r\n}\r\n",
+							"raw": "{\"productos\":\r\n    [\r\n        {\"nombre\":\"televisor\",\"descripcion\":\"cono de plastico\",\"codigo\":22222,\"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\",\"precio\":255,\"stock\":31,\"id\":4,\"timestamp\":1654402146644}\r\n    ]\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -151,7 +263,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/carrito/62c82afc60a2da425bacc173",
+							"raw": "http://localhost:8080/api/carrito/6317f73e95116f364993861b",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -160,7 +272,7 @@
 							"path": [
 								"api",
 								"carrito",
-								"62c82afc60a2da425bacc173"
+								"6317f73e95116f364993861b"
 							]
 						}
 					},
@@ -172,7 +284,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/carrito/62c82ae760a2da425bacc171/productos",
+							"raw": "http://localhost:8080/api/carrito/630bc7d1e48bdef8b1623b80/productos",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -181,7 +293,7 @@
 							"path": [
 								"api",
 								"carrito",
-								"62c82ae760a2da425bacc171",
+								"630bc7d1e48bdef8b1623b80",
 								"productos"
 							]
 						}
@@ -195,7 +307,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\"nombre\":\"Celular\",\"descripcion\":\"cono de plastico\",\"codigo\":22222,\"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\",\"precio\":25,\"stock\":22,\"id\":88,\"timestamp\":1654401227090}",
+							"raw": "    {\"nombre\":\"Mouse Inalabrico\",\"descripcion\":\"cono de plastico\",\"codigo\":22222,\"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\",\"precio\":25,\"stock\":22,\"id\":88,\"timestamp\":1654401227090}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -225,7 +337,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/carrito/62c82ae760a2da425bacc171/productos/5",
+							"raw": "http://localhost:8080/api/carrito/630bc7d1e48bdef8b1623b80/productos/8",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -234,9 +346,9 @@
 							"path": [
 								"api",
 								"carrito",
-								"62c82ae760a2da425bacc171",
+								"630bc7d1e48bdef8b1623b80",
 								"productos",
-								"5"
+								"8"
 							]
 						}
 					},
@@ -333,7 +445,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"juan@email.com\",\r\n    \"password\": \"Matias1234\"\r\n}",
+							"raw": "{\r\n    \"username\": \"matiasherreros97@gmail.com\",\r\n    \"password\": \"Matias1234\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -399,6 +511,26 @@
 							"path": [
 								"users",
 								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User GET (login view)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"login"
 							]
 						}
 					},

@@ -16,8 +16,9 @@ class ProductosDAOMongoDB extends ContenedorMongoDB {
 
   async modifyById(id, newData){
     try{
-        await this.collection.findOneAndUpdate({_id: mongoose.Types.ObjectId(id)}, newData)
-        return {message:`Se ha modificado el objeto con id ${id}`}
+        const answer = await this.collection.findOneAndUpdate({_id: mongoose.Types.ObjectId(id)}, newData)
+        // {message:`Se ha modificado el objeto con id ${id}`}
+        return answer 
     } catch (error){
         throw new Error('No existe el ID de producto')
     }
