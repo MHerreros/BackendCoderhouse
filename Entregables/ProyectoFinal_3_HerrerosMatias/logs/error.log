@@ -490,3 +490,18 @@
 [2022-09-28T00:06:49.611] [ERROR] error - Error: Contraseña incorrecta
     at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:95:23
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-10-03T22:46:12.809] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 633b77490bd0e9bd81860c27
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:37:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:13:31)
+[2022-10-03T23:21:10.509] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. Cast to ObjectId failed for value "62c82aba60a2da425bacc16d62c82aba60a2da425bacc16d" (type string) at path "_id" for model "producto"
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:37:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:13:31)
+[2022-10-03T23:44:06.143] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 62c82aba60a2da425bacc16d
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:37:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:13:31)

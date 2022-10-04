@@ -11,7 +11,7 @@ const user = {
 // ==== SCHEMA GRAPHQL ==== //
 const schema = buildSchema(`
     type Producto {
-        _id:ID,
+        _id: String,
         nombre: String,
         descripcion: String,
         codigo: Int,
@@ -38,7 +38,7 @@ const schema = buildSchema(`
 
     type Query {
         getAllProducts: [Producto]
-        getProductById(id: ID!): Producto
+        getProductById(id: ID): Producto
     }
 
     type Mutation {
@@ -69,21 +69,86 @@ const getAllProducts = async () => {
         })
 }
 
-const getProductById = async () => {
-
+const getProductById = async ({ id }) => {
+    return axios.post(`http://localhost:8080/users/login`, user)
+    .then((res) => {    
+        return axios.get(`http://localhost:8080/api/productos/${id}`, 
+            {
+                headers: {
+                    "cookie": res.headers['set-cookie']
+                }
+            }
+        )
+    })
+    .then((res) => {        
+        // console.log('SUCCESS: ', res.data)
+        return res.data
+    })
+    .catch((e) => {
+        console.error("FAILED: ", e.message)
+    })
 }
 
-const addProduct = async () => {
-
+const addProduct = async ({ data }) => {
+    return axios.post(`http://localhost:8080/users/login`, user)
+    .then((res) => {    
+        return axios.post(`http://localhost:8080/api/productos/`, data,
+            {
+                headers: {
+                    "cookie": res.headers['set-cookie']
+                }
+            }
+        )
+    })
+    .then((res) => {        
+        // console.log('SUCCESS: ', res.data)
+        return res.data
+    })
+    .catch((e) => {
+        console.error("FAILED: ", e.message)
+    })
 }
 
-const modifyProduct = async () => {
-    
+const modifyProduct = async ({ id, data }) => {
+    return axios.post(`http://localhost:8080/users/login`, user)
+    .then((res) => {    
+        return axios.put(`http://localhost:8080/api/productos/${id}`, data,
+            {
+                headers: {
+                    "cookie": res.headers['set-cookie']
+                }
+            }
+        )
+    })
+    .then((res) => {        
+        // console.log('SUCCESS: ', res.data)
+        return res.data
+    })
+    .catch((e) => {
+        console.error("FAILED: ", e.message)
+    })
 }
 
-const deleteProduct = async () => {
-    
+const deleteProduct = async ({ id }) => {
+    return axios.post(`http://localhost:8080/users/login`, user)
+    .then((res) => {    
+        return axios.delete(`http://localhost:8080/api/productos/${id}`,
+            {
+                headers: {
+                    "cookie": res.headers['set-cookie']
+                }
+            }
+        )
+    })
+    .then((res) => {        
+        // console.log('SUCCESS: ', res.data)
+        return res.data
+    })
+    .catch((e) => {
+        console.error("FAILED: ", e.message)
+    })
 }
+
 const app = express()
 app.use(express.static('public'));
 
