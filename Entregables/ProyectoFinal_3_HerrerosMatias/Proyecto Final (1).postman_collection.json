@@ -226,6 +226,108 @@
 			]
 		},
 		{
+			"name": "Products KOA",
+			"item": [
+				{
+					"name": "Product PUT Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\":\"Samsung\", \"descripcion\":\"yerba mate La Merced\", \"codigo\":3333, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 25, \"stock\": 22}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/productos/6344a2557f109400cea6461a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"productos",
+								"6344a2557f109400cea6461a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product POST Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\":\"Reloj\", \"descripcion\":\"tablets\", \"codigo\":22222, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 255, \"stock\": 31}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product GET Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/productos/6344a2557f109400cea6461a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"productos",
+								"6344a2557f109400cea6461a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products DELETE Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/productos/6344a2557f109400cea6461a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"productos",
+								"6344a2557f109400cea6461a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Carts",
 			"item": [
 				{
