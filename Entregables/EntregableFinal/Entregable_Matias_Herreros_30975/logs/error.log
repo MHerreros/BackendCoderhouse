@@ -1,0 +1,507 @@
+[2022-08-28T20:44:52.989] [ERROR] error - error
+[2022-08-28T20:47:19.683] [ERROR] error - error
+[2022-08-28T20:47:36.991] [ERROR] error - error
+[2022-08-28T20:50:50.362] [ERROR] error - error
+[2022-08-28T20:53:03.139] [ERROR] error - error
+[2022-08-28T20:55:31.526] [ERROR] error - error
+[2022-08-28T21:10:57.310] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. Cast to ObjectId failed for value "630bf057e1c564cffb3ef4b" (type string) at path "_id" for model "producto"
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\productosRouter.js:21:31
+[2022-08-28T21:11:20.098] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 630bf057e1c564cffb3ef4bf
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\productosRouter.js:21:31
+[2022-08-31T18:54:34.141] [ERROR] error - Error: Error: No existe el ID 62c82ae760a2da425bacc171
+    at CarritosDAOMongoDB.getAll (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:67:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:72:27
+[2022-08-31T19:08:58.629] [ERROR] error - ReferenceError: answer is not defined
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:127:41
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:10:24.409] [ERROR] error - ReferenceError: answer is not defined
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:127:41
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:11:15.073] [ERROR] error - ReferenceError: answer is not defined
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:127:41
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:25:55.714] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 630fdff3db5941d56e39ada3
+    at UsuariosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:131:30
+[2022-08-31T19:30:45.062] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 630fe115e758b1ca2bec1961
+    at UsuariosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:132:30
+[2022-08-31T19:32:02.147] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 630fe1621b7dc8f7cdb3cdb5
+    at UsuariosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:132:30
+[2022-08-31T19:32:54.234] [ERROR] error - ReferenceError: answer is not defined
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:138:41
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:38:58.081] [ERROR] error - TypeError: notifyPurchase is not a function
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:137:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:47:14.833] [ERROR] error - ReferenceError: products is not defined
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:137:38
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:48:27.566] [ERROR] error - TypeError: console.log(...) is not a function
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:139:17
+    at Array.map (<anonymous>)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:137:53
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:52:03.940] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'forEach')
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:138:59
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:54:13.997] [ERROR] error - TypeError: Assignment to constant variable.
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:132:30
+    at Array.forEach (<anonymous>)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:131:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T19:54:29.918] [ERROR] error - TypeError: products.map is not a function
+    at notifyPurchase (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\utils\ethereal.js:26:28)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\carritosRouter.js:146:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T20:56:55.968] [ERROR] error - Error: El usuario graciela@email.com ya existe
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:70:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T21:00:06.766] [ERROR] error - Error: El usuario carlos@email.com ya existe
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:70:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-08-31T23:24:42.517] [ERROR] error - Error: No se encontro el usuario "juan@email.com"
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-05T23:14:10.439] [ERROR] error - TypeError: editItem is not a function
+    at editProduct (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:57:28)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:365:14)
+[2022-09-05T23:14:49.531] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 6316a4d831dd355907fe1ecd
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:47:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:13:31)
+[2022-09-06T22:50:57.240] [ERROR] error - Error: No existe el ID
+    at CarritosDAOMongoDB.modifyById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:94:23)
+    at addProductToCart (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\cartController.js:85:42)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+[2022-09-06T23:53:09.659] [ERROR] error - ReferenceError: cartProducts is not defined
+    at finishPurchase (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\cartController.js:124:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-07T21:27:58.878] [ERROR] error - ReferenceError: mongoose is not defined
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:35:44)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+[2022-09-07T21:29:21.829] [ERROR] error - Error: El usuario carlos@email.com ya existe
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:65:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-07T22:08:47.622] [ERROR] error - Error: No existe el ID
+    at CarritosDAOMongoDB.modifyById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\carritos\CarritosDAOMongoDB.js:28:15)
+    at editItem (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\cartServices.js:25:26)
+    at addProductToCart (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\cartController.js:87:34)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+[2022-09-12T23:00:43.125] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:14:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\userServices.js:5:12)
+    at async userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:35:22)
+[2022-09-12T23:01:03.275] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:14:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\userServices.js:6:12)
+    at async userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:35:22)
+[2022-09-25T20:32:04.319] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:92:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T19:24:59.385] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:35:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T19:27:02.087] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T19:27:56.143] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T19:28:18.263] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T19:28:51.990] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T19:29:32.782] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T19:29:55.922] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T19:30:16.309] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T19:33:28.520] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T20:14:13.483] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T20:15:20.709] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T20:15:35.753] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T20:15:58.101] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:36:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T20:20:16.261] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:37:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T20:20:48.063] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at userInfo (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:37:85)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:47:12)
+[2022-09-26T20:23:47.909] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:24:26.627] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:24:55.076] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:25:05.150] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:25:57.224] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:26:15.815] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:26:34.718] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:30:27.148] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:30:50.301] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:31:52.614] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:39:36.212] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:40:31.454] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:42:44.488] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:43:36.757] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:44:23.367] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:44:23.788] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:45:04.838] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:45:05.252] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:45:37.064] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T20:45:37.143] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at process.processImmediate (node:internal/timers:442:9)
+[2022-09-26T20:46:08.420] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:05:46.139] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:06:04.897] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:06:05.298] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:39:08.002] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:39:30.371] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:39:49.004] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:40:05.150] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:94:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:45:40.047] [ERROR] error - Error: El usuario carlos@email.com ya existe
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:64:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:45:51.417] [ERROR] error - Error: El usuario carlos@email.com ya existe
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:64:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:46:15.617] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T21:51:13.897] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:00:44.905] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:00:49.353] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:02:47.553] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:03:52.897] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:04:00.045] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:04:18.673] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:23:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:05:35.309] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:24:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:05:58.712] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). Cannot read properties of null (reading '_id')
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:24:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:06:44.767] [ERROR] error - Error: Error en la busqueda del Usuario (findUser()). user is not defined
+    at UsuariosDAOMongoDB.findUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\daos\usuarios\UsuariosDAOMongoDB.js:25:15)
+    at Strategy._verify (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:61:24)
+    at Strategy.authenticate (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\passport-local\lib\strategy.js:88:12)
+    at attempt (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\express\lib\router\index.js:284:15
+[2022-09-26T22:07:34.382] [ERROR] error - Error: Error en la creacion de la coleccion. ValidationError: timestamp: Path `timestamp` is required.
+    at UsuariosDAOMongoDB.save (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:23:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:09:29.350] [ERROR] error - Error: Error en la creacion de la coleccion. ValidationError: timestamp: Path `timestamp` is required.
+    at UsuariosDAOMongoDB.save (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:23:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:10:35.965] [ERROR] error - Error: Error en la creacion de la coleccion. ValidationError: timestamp: Path `timestamp` is required.
+    at UsuariosDAOMongoDB.save (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:23:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:17:43.804] [ERROR] error - TypeError: Cannot set properties of undefined (setting 'timestamp')
+    at createUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:19:24)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:67:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:39:30.421] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'body')
+    at createItem (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\userServices.js:9:21)
+    at createUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:19:18)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:67:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:40:46.368] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'body')
+    at createItem (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\userServices.js:9:21)
+    at createUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:20:18)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:67:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:42:26.252] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'body')
+    at createItem (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\userServices.js:9:21)
+    at createUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:20:18)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:67:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:44:43.426] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'body')
+    at createItem (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\userServices.js:10:29)
+    at createUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:20:18)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:67:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:45:06.865] [ERROR] error - Error: Error en la creacion de la coleccion. ValidationError: timestamp: Path `timestamp` is required.
+    at UsuariosDAOMongoDB.save (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:23:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createUser (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\userController.js:19:12)
+[2022-09-26T22:45:38.065] [ERROR] error - Error: El usuario carlos2@email.com ya existe
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:64:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-26T22:46:04.903] [ERROR] error - Error: El usuario carlos2@email.com ya existe
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:64:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-28T00:04:39.403] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:95:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-28T00:05:18.001] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:95:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-09-28T00:06:49.611] [ERROR] error - Error: Contraseña incorrecta
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\router\userRouter.js.js:95:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-10-03T22:46:12.809] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 633b77490bd0e9bd81860c27
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:37:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:13:31)
+[2022-10-03T23:21:10.509] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. Cast to ObjectId failed for value "62c82aba60a2da425bacc16d62c82aba60a2da425bacc16d" (type string) at path "_id" for model "producto"
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:37:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:13:31)
+[2022-10-03T23:44:06.143] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 62c82aba60a2da425bacc16d
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:37:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:13:31)

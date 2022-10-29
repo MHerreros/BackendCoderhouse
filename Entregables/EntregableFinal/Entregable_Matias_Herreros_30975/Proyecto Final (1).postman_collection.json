@@ -1,0 +1,644 @@
+{
+	"info": {
+		"_postman_id": "69a1dfec-6273-4153-a724-ecaf3525c38c",
+		"name": "Proyecto Final (1)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20985927"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Product PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\":\"Gorro\", \"descripcion\":\"yerba mate La Merced\", \"codigo\":3333, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 25, \"stock\": 22}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/62c82aba60a2da425bacc16d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"62c82aba60a2da425bacc16d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\":\"Control\", \"descripcion\":\"tablets\", \"codigo\":22222, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 255, \"stock\": 31}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/62c82aba60a2da425bacc16d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"62c82aba60a2da425bacc16d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/633b77490bd0e9bd81860c27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"633b77490bd0e9bd81860c27"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products GraphQL",
+			"item": [
+				{
+					"name": "Mutation ADD Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "\r\nmutation {\r\n    addProduct(data:{\r\n        nombre:\"Mouse Inalambrico\", \r\n        descripcion:\"tablets\", \r\n        codigo:22222, \r\n        foto:\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \r\n        precio: 255, \r\n        stock: 31\r\n    }) {\r\n        nombre\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mutation EDIT Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "\r\nmutation {\r\n    modifyProduct(\r\n        id:\"62c82aba60a2da425bacc16d\",\r\n        data:{\r\n            nombre:\"Terba MARCA 1\", \r\n            descripcion:\"tablets\", \r\n            codigo:22222, \r\n            foto:\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \r\n            precio: 255, \r\n            stock: 31\r\n        }\r\n    )\r\n    {\r\n        nombre,\r\n        _id\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mutation DELETE Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "\r\nmutation {\r\n    deleteProduct(\r\n        id:\"62c82aba60a2da425bacc16d\",\r\n    )\r\n    {\r\n        message\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Query GET Product/s",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n    getAllProducts {\r\n        nombre\r\n    }\r\n    getProductById(id: \"62c82aba60a2da425bacc16d\") {\r\n        nombre\r\n    }\r\n    \r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products KOA",
+			"item": [
+				{
+					"name": "Product PUT Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\":\"Samsung\", \"descripcion\":\"yerba mate La Merced\", \"codigo\":3333, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 25, \"stock\": 22}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/productos/6344a2557f109400cea6461a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"productos",
+								"6344a2557f109400cea6461a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product POST Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\":\"Reloj\", \"descripcion\":\"tablets\", \"codigo\":22222, \"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\", \"precio\": 255, \"stock\": 31}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product GET Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/productos/6344a2557f109400cea6461a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"productos",
+								"6344a2557f109400cea6461a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products DELETE Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/productos/6344a2557f109400cea6461a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"productos",
+								"6344a2557f109400cea6461a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carts",
+			"item": [
+				{
+					"name": "Carrito POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"productos\":\r\n    [\r\n        {\"nombre\":\"televisor\",\"descripcion\":\"cono de plastico\",\"codigo\":22222,\"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\",\"precio\":255,\"stock\":31,\"id\":4,\"timestamp\":1654402146644}\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/6317f73e95116f364993861b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"6317f73e95116f364993861b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/630bc7d1e48bdef8b1623b80/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"630bc7d1e48bdef8b1623b80",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito POST Producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\"nombre\":\"Mouse Inalabrico\",\"descripcion\":\"cono de plastico\",\"codigo\":22222,\"foto\":\"https://cdn2.iconfinder.com/data/icons/random-set-1/404/Asset_81-128.png\",\"precio\":25,\"stock\":22,\"id\":88,\"timestamp\":1654401227090}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/630bc7d1e48bdef8b1623b80/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"630bc7d1e48bdef8b1623b80",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito DELETE Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/630bc7d1e48bdef8b1623b80/productos/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"630bc7d1e48bdef8b1623b80",
+								"productos",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito GET by User ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito POST (comprar)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cartId\": \"630bc7d1e48bdef8b1623b80\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/buy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"buy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User POST (create)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Carlos\",\r\n    \"apellido\": \"Herreros\",\r\n    \"username\": \"carlos@email.com\",\r\n    \"password\": \"Graciela1234\",\r\n    \"edad\": 50,\r\n    \"direccion\": \"Avenida Siempre Viva 444\",\r\n    \"telefono\": 541165948792,\r\n    \"foto\": \"static/user-profiles/avatar1.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User POST (login)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"matiasherreros97@gmail.com\",\r\n    \"password\": \"Matias1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User POST (logout)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"graciela@email.com\",\r\n    \"password\": \"Graciela1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User GET (info)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User GET (login view)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

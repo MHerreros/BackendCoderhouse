@@ -1,0 +1,60 @@
+[2022-10-10T19:26:19.397] [ERROR] error - Error: Error en lectura de archivo en funcion getAll. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:60:23
+    at async getAllItems (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:9:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:25:27)
+[2022-10-10T19:27:24.551] [ERROR] error - Error: Error en lectura de archivo en funcion getAll. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:60:23
+    at async getAllItems (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:9:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:25:27)
+[2022-10-10T19:31:14.537] [ERROR] error - Error: Error en lectura de archivo en funcion getAll. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:60:23
+    at async getAllItems (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:9:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:25:27)
+[2022-10-10T19:31:46.800] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:40:23
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:13:31)
+[2022-10-10T19:31:46.802] [ERROR] error - Error: Error en lectura de archivo en funcion getAll. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:60:23
+    at async getAllItems (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:9:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:25:27)
+[2022-10-10T19:32:00.723] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:40:23
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:13:31)
+[2022-10-10T19:32:00.730] [ERROR] error - Error: Error en lectura de archivo en funcion getAll. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:60:23
+    at async getAllItems (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:9:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:25:27)
+[2022-10-10T19:33:14.497] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:40:23
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:14:31)
+[2022-10-10T19:33:14.506] [ERROR] error - Error: Error en lectura de archivo en funcion getAll. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:60:23
+    at async getAllItems (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:9:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:29:27)
+[2022-10-10T19:34:00.174] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:40:23
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:14:31)
+[2022-10-10T19:34:10.614] [ERROR] error - Error: Error en lectura de archivo en funcion getAll. ENOENT: no such file or directory, open 'C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\public\productos.json'
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerArchivo.js:60:23
+    at async getAllItems (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:9:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:31:27)
+[2022-10-10T19:51:21.949] [ERROR] error - TypeError: Cannot set properties of undefined (setting 'timestamp')
+    at addItem (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:13:23)
+    at addProduct (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:49:34)
+    at dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\koa-router\lib\router.js:425:16
+    at dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\koa-router\lib\router.js:430:31)
+    at dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\node_modules\koa-body\index.js:148:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-10-10T20:02:05.046] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. No existe el ID 6344a2557f109400cea6461a
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\db\containers\containerMongoDb.js:37:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\KoaServer\koaController.js:13:31)
