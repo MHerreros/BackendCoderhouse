@@ -7,13 +7,29 @@ const sendWhatsApp = require('../utils/twilio')
 
 const adminUser = {nombre:process.env.ADMIN_NOMBRE, username: process.env.ADMIN_EMAIL, telefono:process.env.ADMIN_TELEFONO}
 
-const { getItemByUserId, addItem, deleteItem, getAllItems, editItem, getItemById } = require('../services/cartServices')
+const { getItemByUserId, addItem, deleteItem, getAllItems, editItem, getItemById, getItemByUserIdAndStatus } = require('../services/cartServices')
 
 const getUsersCart = async (req, res) => { 
     if(authorizationLevel == 0 || authorizationLevel == 1){
         try{
             const userId = req.session.passport.user
             const data3 = await getItemByUserId(userId)
+            return res.status(200).json(data3)
+        } catch (error) {
+            errorLogger.error(error)
+            return res.status(500).json(error.message)
+        }
+    } else {
+        return res.status(401).json({url: req.originalUrl, method: req.method, status: 401, error: 'Unauthorized', message:`Ruta '${req.originalUrl}', metodo '${req.method}' no autorizada para el usuario.`})
+    }
+}
+
+const getUsersCartbyStatus = async (req, res) => { 
+    if(authorizationLevel == 0 || authorizationLevel == 1){
+        try{
+            const userId = req.session.passport.user
+            const status = req.params.status
+            const data3 = await getItemByUserIdAndStatus(userId, status)
             return res.status(200).json(data3)
         } catch (error) {
             errorLogger.error(error)
@@ -65,7 +81,6 @@ const getProductsFromCart = async (req, res) => {
         }
         try{
             const data3 = await getAllItems(cartId)
-            // console.log(data3)
             return res.status(200).json(data3)
         } catch (error) {
             errorLogger.error(error)
@@ -134,4 +149,4 @@ const finishPurchase = async (req, res) => {
     }
 }
 
-module.exports = { getUsersCart, createCart, deleteCart, getProductsFromCart, addProductToCart, deleteProductFromCart, finishPurchase }
+module.exports = { getUsersCart, createCart, deleteCart, getProductsFromCart, addProductToCart, deleteProductFromCart, finishPurchase, getUsersCartbyStatus }

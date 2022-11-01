@@ -3,6 +3,7 @@ const normalizeCartData = (rawCart) => {
         let cartArray = {
             _id: cart._id,
             user: cart.user,
+            status: cart.status,
             productos: cart.productos.map(product => {
                 let productArray = {
                     nombre: product.nombre,

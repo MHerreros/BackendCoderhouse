@@ -8,12 +8,15 @@ const carritoRouter = Router()
 
 const validateSession = require('../utils/sessionValidator')
 
-const { getUsersCart, createCart, deleteCart, getProductsFromCart, addProductToCart, deleteProductFromCart, finishPurchase } = require('../controllers/cartController')
+const { getUsersCart, createCart, deleteCart, getProductsFromCart, addProductToCart, deleteProductFromCart, finishPurchase, getUsersCartbyStatus } = require('../controllers/cartController')
 
 // RUTAS CARRITO
 
 // Busca los carritos asociados al usuario
 carritoRouter.get('', validateSession, getUsersCart)
+
+// Busca los carritos asociados al usuario y segun status del carrito
+carritoRouter.get('/:status', validateSession, getUsersCartbyStatus)
 
 // Crea nuevo carrito
 carritoRouter.post('', validateSession, createCart)
