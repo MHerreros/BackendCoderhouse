@@ -458,9 +458,16 @@
 				},
 				{
 					"name": "Carrito GET by User ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "http://localhost:8080/api/carrito",
 							"protocol": "http",
@@ -471,6 +478,27 @@
 							"path": [
 								"api",
 								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Carrito GET by User ID and Cart Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/bought",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"bought"
 							]
 						}
 					},
@@ -635,6 +663,19 @@
 								"login"
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
