@@ -1,0 +1,48 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img src="https://cdn4.iconfinder.com/data/icons/internet-security-flat-2/32/Internet_Security_entrance_login_log_in_arrow-256.png" alt="logo" height="50">
+            <h2>Registrarse</h2>
+        </div>
+
+        <div class="modal-body">
+            <form role='form' method='POST' action='/users/create'>
+                <!-- method='POST' action='http://localhost:8080/api/productos/' -->
+                <div class="form-group">
+                    <label for="title">Nombre</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Ingrese su nombre" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="title">Apellido</label>
+                    <input type="text" class="form-control" id="surnameInput" placeholder="Ingrese su Apellido" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="title">Email</label>
+                    <input type="mail" class="form-control" id="emailInput" placeholder="Ingrese su email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="price">Contraseña</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Ingrese su contraseña" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="title">Edad</label>
+                    <input type="text" class="form-control" id="ageInput" placeholder="Ingrese su edad" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="title">Direccion</label>
+                    <input type="text" class="form-control" id="addressInput" placeholder="Ingrese su direccion" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="title">Telefono</label>
+                    <input type="text" class="form-control" id="phoneInput" placeholder="Ingrese su telefono" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="title">Foto</label>
+                    <input type="text" class="form-control" id="pictureInput" placeholder="Ingrese un link" name="username">
+                </div>
+                <button type="text" class="btn btn-success" id="submitSignup">Registrarse</button>
+                
+            </form>
+        </div>
+    </div>
+</div>
