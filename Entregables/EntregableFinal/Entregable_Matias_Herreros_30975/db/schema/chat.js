@@ -1,10 +1,10 @@
 const { Schema, model } = require('mongoose')
 
 const chatSchema = new Schema({
-  message: { type: Object, required: false },
-  timestamp: { type: Number, required: false },
-  user: { type: String, required: false },
-  userId: { type: String, required: false },
+  message: { type: Object, required: true },
+  timestamp: { type: Number, required: true },
+  user: { type: String, required: true },
+  userId: { type: String, required: true },
 })
 
 module.exports = chatSchema

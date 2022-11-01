@@ -93,11 +93,9 @@ io.on('connection', socket => {
         await addItem(newMessage)
         const messageCont = newMessage
         socket.emit('refreshMessages', messageCont)
-        // socket.broadcast.emit('refreshMessages', messageCont)
     })
 
     socket.on('disconnect', reason => {
-        // usersArray = usersArray.filter(user => user != socket.id)
         console.log(`Se ha desconectado el cliente con id ${socket.id}`)
     })
 })

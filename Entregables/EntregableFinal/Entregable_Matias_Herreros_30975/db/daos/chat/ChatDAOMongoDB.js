@@ -1,7 +1,4 @@
 const ContenedorMongoDB = require('../../containers/containerMongoDb')
-// const mongoose = require('mongoose')
-// const { dbLogger } = require('../../../utils/log4jsConfig')
-// const { normalizeCartData } = require('../../DTOs/cartDTO')
 
 let chatDAOMongoDBInstance = null
 
@@ -23,7 +20,6 @@ class ChatDAOMongoDB extends ContenedorMongoDB {
         const items = await this.collection.find({userId: id})
 
         if(items){
-          // return normalizeCartData(items)
           return items
         }
         throw new Error(`No existe el ID ${id}`)

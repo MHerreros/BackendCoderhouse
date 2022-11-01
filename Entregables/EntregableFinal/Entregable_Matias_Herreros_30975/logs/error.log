@@ -598,3 +598,7 @@
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\productServices.js:5:12)
     at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\productController.js:13:31)
+[2022-11-01T17:54:51.270] [ERROR] error - TypeError: users.findById is not a function
+    at getUserById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\chatServices.js:23:30)
+    at getUserMessages (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\chatController.js:12:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
