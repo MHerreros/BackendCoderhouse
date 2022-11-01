@@ -1,14 +1,21 @@
 const express = require('express')
 const { Server: HttpServer } = require('http')
+const { Server: IOServer } = require('socket.io')
+
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
 
 const productsRouter = require('./router/productosRouter')
 const carritoRouter = require('./router/carritosRouter')
 const userRouter = require('./router/userRouter.js')
+const chatRouter = require('./router/chatRouter')
+const infoRouter = require('./router/infoRouter')
 
 const app = express()
 const httpServer = new HttpServer(app)
+const io = new IOServer(httpServer)
+
+const flash = require('connect-flash')
 
 const dotenv = require('dotenv')
 dotenv.config()
@@ -26,6 +33,10 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 app.use('/static', express.static(__dirname + '/public'))
+app.use(flash())
+
+app.set('views', './public/views/ejs')
+app.set('view engine', 'ejs')
 
 app.use(session({
     store: MongoStore.create({
@@ -38,9 +49,11 @@ app.use(session({
 }))
 
 // Routers
-app.use('/api/productos', productsRouter)
-app.use('/api/carrito', carritoRouter)
+app.use('/api/productos', validateSession, productsRouter)
+app.use('/api/carrito', validateSession, carritoRouter)
 app.use('/users', userRouter)
+app.use('/chat', validateSession, chatRouter)
+app.use('/info', validateSession, infoRouter)
 
 // Respuesta por default cuando no encuentra la ruta especificada
 app.all('*', validateSession, (req, res) => {
@@ -69,3 +82,20 @@ if ((process.env.CLUSTERING === 'true') && cluster.isMaster){
 
     server.on('error',(error) => {errorLogger.error(`Se ha detectado un error: ${error.message}`)})
 }
+
+const { addItem } = require('./services/chatServices')
+
+// ==== SET SOCKET SERVER ====
+io.on('connection', socket => {
+    console.log(`Nuevo cliente conectado con id ${socket.id}`)
+
+    socket.on('addMessage', async newMessage => {
+        await addItem(newMessage)
+        const messageCont = newMessage
+        socket.emit('refreshMessages', messageCont)
+    })
+
+    socket.on('disconnect', reason => {
+        console.log(`Se ha desconectado el cliente con id ${socket.id}`)
+    })
+})

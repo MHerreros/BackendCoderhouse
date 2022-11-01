@@ -7,7 +7,7 @@ const app = express()
 const { Router } = express
 const userRouter = Router()
 
-const { addUser, userLogin, loginView, userLogout, userInfo, createUser } = require('../controllers/userController')
+const { addUser, userLogin, loginView, userLogout, userInfo, createUser, signupView } = require('../controllers/userController')
 
 // Storage
 const getStorage = require('../db/daos')
@@ -17,7 +17,7 @@ const { users: storage } = getStorage()
 const flash = require('connect-flash')
 
 // Logger
-const { errorLogger } = require('../utils/log4jsConfig')
+const { errorLogger, warningLogger } = require('../utils/log4jsConfig')
 
 // Users Management
 const { createHash, isValidPassword } = require('../utils/bycrypt')
@@ -59,13 +59,12 @@ passport.use(
     }, 
     (req, username, password, done) => {
         return storage.findUser({ username })
-            .then(user => {
+        .then(user => {
                 if (user) {
                     throw new Error(`El usuario ${user.username} ya existe`)
                 }
                 req.body.password = createHash(password)
                 return createUser(req.body)
-                // return storage.save(req.body)
             })
             .then(user => {
                 done(null, user)
@@ -83,19 +82,16 @@ passport.use(
     'login', 
     new LocalStrategy(
         (username, password, done) => {
-        return storage.findUser({ username })
+            return storage.findUser({ username })
         .then(user => {
             if (!user) {
-                throw new Error(`No se encontro el usuario "${username}"`)
+                
+                return done(warningLogger.warn(`No se encontro el usuario "${username}"`))
             }
-
-            // console.log("(1)")
 
             if (!isValidPassword(user.password, password)) {
-                throw new Error('Contraseña incorrecta')
+                return done(warningLogger.warn(`Contraseña incorrecta`))
             }
-
-            // console.log("(2): ", user)
 
             return done(null, user)
         })
@@ -113,8 +109,8 @@ passport.use(
 // Crea nuevo usuario
 userRouter.post('/create', 
     passport.authenticate('signup', {
-        // successRedirect: '/users/login',
-        failureRedirect: '/users/create',
+        successRedirect: '/users/login',
+        failureRedirect: '/users/login',
         failureFlash: true
     }),
     addUser
@@ -123,8 +119,8 @@ userRouter.post('/create',
 // Login usuario
 userRouter.post('/login',     
     passport.authenticate('login', {
-        // successRedirect: '/home',
-        failureRedirect: '/login',
+        // successRedirect: '/chat',
+        failureRedirect: '/error',
         failureFlash: true
     }), 
     userLogin
@@ -132,6 +128,9 @@ userRouter.post('/login',
 
 // Login view
 userRouter.get('/login', loginView)
+
+// Signup view
+userRouter.get('/create', signupView)
 
 // Logout usuario
 userRouter.post('/logout', userLogout)

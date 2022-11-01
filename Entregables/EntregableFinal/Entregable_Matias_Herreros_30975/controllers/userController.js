@@ -5,6 +5,7 @@ const adminUser = {nombre:process.env.ADMIN_NOMBRE, username: process.env.ADMIN_
 // Storage
 const mongoose = require('mongoose')
 const { getItemById, createItem } = require('../services/userServices')
+const { getItemByUserId } = require('../services/cartServices')
 
 // Logger
 const { errorLogger, warningLogger } = require('../utils/log4jsConfig')
@@ -15,22 +16,26 @@ const addUser = async(req, res) => {
     res.redirect('/users/login')
 }
 
+const signupView = async (req, res) => {
+    return res.status(200).render('signup')
+}
+
 const createUser = async(req, res) => {
     return await createItem(req)
 }
 
-const userLogin = async(req, res) => { res.status(202).json({ message: 'Sesion iniciada con exito' })}
+const userLogin = async(req, res) => { 
+    res.status(202).redirect('/chat')
+}
 
 const loginView = async(req, res) => {
-    warningLogger.warn(`Ruta /login en construccion`)
-    return res.status(200).json({message: `Aca se debe cargar la pantalla de login`})
+    return res.status(200).render('login', { message: req.flash('error') })
 }
 
 const userLogout = async(req, res) => {
     req.session.destroy(err =>  {
         if(err){ return next(err) }
-        res.json({message:'Session destroyed'})
-        // res.status(100).redirect('/users/login')
+        res.status(100).redirect('/users/login')
     })
 }
 
@@ -43,4 +48,4 @@ const userInfo = async(req, res) => {
         return res.status(500).json(error.message)
     }
 }
-module.exports = { addUser, userLogin, loginView, userLogout, userInfo, createUser }
+module.exports = { addUser, userLogin, loginView, userLogout, userInfo, createUser, signupView }

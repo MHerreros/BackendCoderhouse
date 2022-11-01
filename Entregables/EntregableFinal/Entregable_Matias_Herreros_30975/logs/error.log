@@ -505,3 +505,166 @@
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\services\productServices.js:5:12)
     at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\ProyectoFinal_3_HerrerosMatias\controllers\productController.js:13:31)
+[2022-10-30T12:27:50.805] [ERROR] error - Error: No se encontro el usuario "Matias"
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\router\userRouter.js.js:90:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-10-30T12:29:06.298] [ERROR] error - Error: No se encontro el usuario "Matias"
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\router\userRouter.js.js:90:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-10-30T12:29:26.602] [ERROR] error - Error: No se encontro el usuario "Matias"
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\router\userRouter.js.js:90:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-10-30T12:30:18.993] [ERROR] error - Error: No se encontro el usuario "Matias"
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\router\userRouter.js.js:90:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-10-30T12:31:13.760] [ERROR] error - Error: No se encontro el usuario "Matias"
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\router\userRouter.js.js:90:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-10-30T12:31:18.077] [ERROR] error - Error: No se encontro el usuario "Matias"
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\router\userRouter.js.js:90:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-10-30T16:21:35.334] [ERROR] error - Error: Error en la creacion de la coleccion. ValidationError: mensaje: Path `mensaje` is required.
+    at ChatDAOMongoDB.save (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\db\containers\containerMongoDb.js:23:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async addItem (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\chatServices.js:13:12)
+    at async sendMessage (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\chatController.js:35:28)
+[2022-10-30T16:42:20.285] [ERROR] error - ReferenceError: getItemByUserId is not defined
+    at getUserMessages (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\chatController.js:17:27)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:47:12)
+[2022-10-30T16:46:22.054] [ERROR] error - ReferenceError: getItemByUserId is not defined
+    at getUserMessages (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\chatController.js:17:27)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:47:12)
+[2022-10-30T16:46:48.692] [ERROR] error - ReferenceError: userId is not defined
+    at getItemByUserId (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\chatServices.js:8:42)
+    at getUserMessages (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\chatController.js:17:33)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:175:3)
+[2022-10-30T16:47:18.006] [ERROR] error - ReferenceError: userId is not defined
+    at getItemByUserId (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\chatServices.js:8:42)
+    at getUserMessages (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\chatController.js:17:33)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:175:3)
+[2022-10-30T16:47:56.968] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. normalizeCartData is not defined
+    at ChatDAOMongoDB.getChatByUserId (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\db\daos\chat\ChatDAOMongoDB.js:31:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemByUserId (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\chatServices.js:8:12)
+    at async getUserMessages (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\chatController.js:17:27)
+[2022-10-30T16:51:20.525] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'user')
+    at getUserMessages (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\chatController.js:16:49)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:47:12)
+[2022-11-01T15:56:51.348] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. Cast to ObjectId failed for value "all" (type string) at path "_id" for model "producto"
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\db\containers\containerMongoDb.js:37:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\productController.js:13:31)
+[2022-11-01T15:56:55.944] [ERROR] error - Error: Error en lectura de arvhivo en funcion getById. Cast to ObjectId failed for value "all" (type string) at path "_id" for model "producto"
+    at ProductosDAOMongoDB.getById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\db\containers\containerMongoDb.js:37:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getItemById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\productServices.js:5:12)
+    at async getProductById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\productController.js:13:31)
+[2022-11-01T17:54:51.270] [ERROR] error - TypeError: users.findById is not a function
+    at getUserById (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\chatServices.js:23:30)
+    at getUserMessages (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\chatController.js:12:36)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2022-11-01T18:04:05.596] [ERROR] error - ReferenceError: userId is not defined
+    at getItemByUserId (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\cartServices.js:8:42)
+    at getUsersCart (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\cartController.js:16:33)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+[2022-11-01T18:05:53.412] [ERROR] error - ReferenceError: userId is not defined
+    at getItemByUserId (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\cartServices.js:8:42)
+    at getUsersCart (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\cartController.js:16:33)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+[2022-11-01T18:05:54.881] [ERROR] error - ReferenceError: userId is not defined
+    at getItemByUserId (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\cartServices.js:8:42)
+    at getUsersCart (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\cartController.js:16:33)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+[2022-11-01T18:07:04.551] [ERROR] error - ReferenceError: userId is not defined
+    at getItemByUserId (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\services\cartServices.js:8:42)
+    at getUsersCart (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\cartController.js:17:33)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+[2022-11-01T18:17:00.406] [ERROR] error - TypeError: Cannot read properties of undefined (reading 'status')
+    at getUsersCartbyStatus (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\cartController.js:31:44)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:365:14)
+[2022-11-01T18:17:43.820] [ERROR] error - TypeError: getCartByUserIdAndStatus is not a function
+    at getUsersCartbyStatus (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\controllers\cartController.js:33:33)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at validateSession (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\utils\sessionValidator.js:4:16)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:284:15
+    at param (C:\Users\Carlos Tuma\Desktop\Backend\BackendCoderhouse\Entregables\EntregableFinal\Entregable_Matias_Herreros_30975\node_modules\express\lib\router\index.js:365:14)

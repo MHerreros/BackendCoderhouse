@@ -1,68 +1,32 @@
 const dotenv = require('dotenv')
 dotenv.config()
 const uri = process.env.MONGO_URL
+
 // SCHEMAS
 const schemaCarrito = require('../schema/carrito')
 const schemaProducto = require('../schema/productos')
 const schemaUsuario = require('../schema/usuarios')
+const schemaChat = require('../schema/chat')
 
-// DAOS PRODUCTO
-// Instancia de los Contenedores de Productos para distintos archivos
-const ProductosDAOArchivo = require('./productos/ProductosDAOArchivo')
-const ProductosDAOMemoria = require('./productos/ProductosDAOMemoria')
+// DAOs
 const ProductosDAOMongoDB = require('./productos/ProductosDAOMongoDB')
-const ProductosDAOFirebase = require('./productos/ProductosDAOFirebase')
-
-// DAOS CARRITOS
-// Instancia de los Contenedores de Carritos para distintos archivos
-const CarritosDAOArchivo = require('./carritos/CarritosDAOArchivo')
-const CarritosDAOMemoria = require('./carritos/CarritosDAOMemoria')
 const CarritosDAOMongoDB = require('./carritos/CarritosDAOMongoDB')
-const CarritosDAOFirebase = require('./carritos/CarritosDAOFirebase')
-
-// DAOS USUARIOS
-// Instancia de los Contenedores de Usuarios para distintos archivos
 const UsuariosDAOMongoDB = require('./usuarios/UsuariosDAOMongoDB')
-
-// const singletonCarritos = require('./carritos/CarritosDAOMongoDB')
+const ChatDAOMongoDB = require('./chat/ChatDAOMongoDB')
 
 // ==== FACTORY DAOS ====
+// ** Se crea la factory para que, en caso de ser necesario, se puedan implementar nuevos metodos de persistencia.
+
 const getStorage = () => {
-  const storage = process.env.STORAGE || 'archivo'
+  const storage = process.env.STORAGE || 'mongodb'
 
   switch (storage) {
-    case 'archivo':
-      return {
-        products: new ProductosDAOArchivo(),
-        carts: new CarritosDAOArchivo(),
-      }
-      break
-
-    case 'memoria':
-      return {
-        products: new ProductosDAOMemoria(),
-        carts: new CarritosDAOMemoria()
-      }
-      break
-
     case 'mongodb':
       return {
         products: ProductosDAOMongoDB.getInstance('producto', schemaProducto, uri),
         carts: CarritosDAOMongoDB.getInstance('carrito', schemaCarrito, uri),
-        users: UsuariosDAOMongoDB.getInstance('usuarios', schemaUsuario, uri)
-      }
-      break
-
-    case 'firebase':
-      return {
-        products: new ProductosDAOFirebase('producto'),
-        carts: new CarritosDAOFirebase('carrito')
-      }
-      break
-    default:
-      return {
-        products: new ProductosDAOArchivo(),
-        carts: new CarritosDAOArchivo()
+        users: UsuariosDAOMongoDB.getInstance('usuarios', schemaUsuario, uri),
+        chat: ChatDAOMongoDB.getInstance('chat', schemaChat, uri)
       }
       break
   }

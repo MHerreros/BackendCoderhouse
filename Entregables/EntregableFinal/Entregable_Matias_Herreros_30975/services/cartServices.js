@@ -4,8 +4,12 @@ const mongoose = require('mongoose')
 const { carts: storage } = getStorage()
 const { users } = getStorage()
 
-const getItemByUserId = async () => {
+const getItemByUserId = async (userId) => {
     return await storage.getCartByUserId(userId)
+}
+
+const getItemByUserIdAndStatus = async (userId, status) => {
+    return await storage.getCartByUserIdAndStatus(userId, status)
 }
 
 const addItem = async(newItem) => {
@@ -38,4 +42,4 @@ const getItemById = async(itemId) => {
     return { cartProducts, cartUser }
 }
 
-module.exports = { getItemByUserId, addItem, deleteItem, getAllItems, editItem, getItemById }
+module.exports = { getItemByUserId, addItem, deleteItem, getAllItems, editItem, getItemById, getItemByUserIdAndStatus }
